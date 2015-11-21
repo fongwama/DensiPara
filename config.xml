@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.fongwama.densitepara"
+        versionCode = "10" 
+        version     = "0.2.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>DensitePara</name>
+
+    <description>
+        Calcul de la densité parasitaire. 
+    </description>
+
+    <author href="http://www.fongwama.com" email="support@fongwama.com">
+        Fongwama 
+    </author>
+
+    <!-- build only for android -->
+    <platform name="android" />
+
+    <!-- no permission required -->
+    <preference name="permissions" value="none"/>
+
+</widget>
+
