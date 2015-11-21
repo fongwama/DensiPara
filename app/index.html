@@ -39,7 +39,7 @@
                     </div>
 
                     <div>
-                        <label for="nbreGloBlancSang">Nombre de Globules blancs/µ de sang<sup><img src="img/asterisk.gif"/></sup></label>
+                        <label for="nbreGloBlancSang">Nombre de globules blancs / µL de sang<sup><img src="img/asterisk.gif"/></sup></label>
                         <input name="nbreGloBlancSang" type="text" id="nbreGloBlancSang">
                         <span id="infoNbreGloBlancSang"></span>
                     </div>
@@ -53,12 +53,16 @@
                     <div class="div_resultat">
                         <label for="nbreGloBlancSang" class="lbldensitePara">Densité parasitaire</label>
                         <span name="resultat" id="densite"></span><br/>
-                        <label><em>parasites /µ de sang</em></label>
+                        <label><em>parasites / µL de sang</em></label>
                     </div>
 
                     <div>
                         <label for="numeroReference">Numéro de référence</label>
                         <input id="numeroReference" name="numeroReference" type="text"/>
+                    </div>
+                    <div>
+                        <label>Date et heure</label>
+                        <input id="date_heure" name="date_heure" type="text"/>
                     </div>
 
                 </form>
@@ -68,7 +72,6 @@
         <!-- Pied de page de la page-->
         <footer>
                 <div class="date_time">
-                    <span id="date_heure"></span>
                     <span id="fongwama"><em> Copyright &copy Fongwama 2015 </em></span>
                 </div>
         </footer>

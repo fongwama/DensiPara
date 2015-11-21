@@ -6,22 +6,6 @@ $(document).ready(function(){
      * Validation des données
      */
 
-     // On s'assure que l'utilisateur saisi un nombre de parasite valide
-    $("input").keypress(function(event){
-
-        var returnValue = false;
-
-        var charCode = (window.Event) ? event.which : event.keyCode;
-        if (((charCode >= 48) && (charCode <= 57)) || // Tous les numériques
-            (charCode == 8) ||     // Retour-Arriére (Backspace)
-            (charCode == 13)||    // Retour chariot (touche entré)
-            (charCode == 0)){
-
-            returnValue = true;
-        }
-        return returnValue;
-    });
-
     //fixer la valeur par défaut du nombre de globules blancs par microlitre de sang
     $('#nbreGloBlancSang').val(8000);
 
@@ -50,18 +34,17 @@ $(document).ready(function(){
 
 
     // Appel de la fonction d'affichage de l'heure
-    date_heure("date_heure");
+    afficher_date_heure("#date_heure");
 });
 
 
 // Méthode permettant de calculer la densité parasitaire
 function calculer() {
-    if(nestPasVide()) { // Si l'utilisateur é tout renseigner, alors
-        if (nestPasEgalAZero()) { // Si les valeurs champs sont supérieur é 0 alors on effectue le calcule
-            var resultat = $("#nbreParasite").val() * $("#nbreGloBlancSang").val() / $("#nbreGlobuleBlanc").val();
-            $("#densite").html(Math.round(resultat));
-        }
+    if(check_input_data()) { // Si l'utilisateur à tout renseigner, alors
+        var resultat = $("#nbreParasite").val() * $("#nbreGloBlancSang").val() / $("#nbreGlobuleBlanc").val();
+        $("#densite").html(Math.round(resultat));
     }
+    afficher_date_heure("#date_heure");
 }
 
 
@@ -78,144 +61,60 @@ function reset ()
 
 }
 
-// Procédure permettant d'afficher les messages d'erreurs
-function afficherErreur(param){
 
-    // On affiche le message d'erreur en fonction du paramètre
-    if(param == 0){
-        document.getElementById("infoNbreParasite").style.display = "block";
-    }else if(param == 1){
-        document.getElementById("infoNbreGlobuleBlanc").style.display = "block";
-    }else if(param == 2){
-        document.getElementById("infoNbreGloBlancSang").style.display = "block";
-    }else{ // Si c'est un paramètre autre que 0, 1 ou 2 alors on affiche toutes les messages d'erreur
-        document.getElementById("infoNbreParasite").style.display ="block";
-        document.getElementById("infoNbreGlobuleBlanc").style.display ="block";
-        document.getElementById("infoNbreGloBlancSang").style.display ="block";
+function check_input_data() {
+    // check in input fields are nummbers
+    //
+    // nombre de parasites
+    if ( !$.isNumeric( $("input#nbreParasite").val() ) ){
+        // clean data and focus on input
+        $("input#nbreParasite").val("");
+        $("input#nbreParasite").focus();
+        // print error message
+        $("#infoNbreParasite").html("Veuillez saisir le nombre de parasites.");
+        $("#infoNbreParasite").css("display","block");
+        return false;
     }
-}
-
-
-// Méthode permettant de vérifier si un champ n'est pas vide
-function nestPasVide(){
-
-    // Si le nombre de parasites, le ne nombre de globule blanc et le nombre de
-    // globule  blanc par micro litre de sang ne sont pas renseigner
-    if(document.getElementById("nbreParasite").value == "" &&
-        document.getElementById("nbreGlobuleBlanc").value == "" &&
-        document.getElementById("nbreGloBlancSang").value == ""){
-
-        document.getElementById("infoNbreParasite").innerHTML = "Veuillez saisir le nombre de parasites !";
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Veuillez saisir le nombre de globule blanc !";
-        document.getElementById("infoNbreGloBlancSang").innerHTML = "Veuiller saisir le nombre de Globules blancs/µ de sang !";
-
-        afficherErreur(4);
-
+    // nombre de globules blancs
+    // doit impérativement être différent de 0
+    if ( !$.isNumeric( $("input#nbreGlobuleBlanc").val() ) ){
+        // clean data and focus on input
+        $("input#nbreGlobuleBlanc").val("");
+        $("input#nbreGlobuleBlanc").focus();
+        // print error message
+        $("#infoNbreGlobuleBlanc").html("Veuillez saisir le nombre de globules blancs.");
+        $("#infoNbreGlobuleBlanc").css("display","block");
         return false;
-
-        // Si le nombre de parasites et le nombre de globule n'est pas renseigner
-    }else if(document.getElementById("nbreParasite").value == "" && document.getElementById("nbreGlobuleBlanc").value == ""){
-
-        document.getElementById("infoNbreParasite").innerHTML = "Veuillez saisir le nombre de parasites !";
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Veuillez saisir le nombre de globule blanc !";
-
-        // On affiche le message d'erreur en fonction du paramètre
-        afficherErreur(0);
-        afficherErreur(1)
-
-        return false;
-
-        // Si le nombre de parasite n'est pas renseigner
-    }else if(document.getElementById("nbreParasite").value == "") {
-
-        document.getElementById("infoNbreParasite").innerHTML = "Veuillez saisir le nombre de parasites !";
-        afficherErreur(0);
-
-        return false;
-
-        // Si le nombre de globule blanc n'est pas renseigner
-    }else if(document.getElementById("nbreGlobuleBlanc").value == ""){
-
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Veuillez saisir le nombre de globule blanc !";
-        afficherErreur(1);
-
-        return false;
-
-        // Si le nombre de globule blanc par micro litre de sang n'est pas renseigner
-    }else if( document.getElementById("nbreGloBlancSang").value == ""){
-
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Veuiller saisir le nombre de Globules blancs/µ de sang !";
-        afficherErreur(2);
-
-        return false;
-
-    }else{
-        return true;
+    // nombre de globules blancs
+    // doit impérativement être différent de 0
+    }else if ( $("input#nbreGlobuleBlanc").val() == 0 ) {
+        // clean data and focus on input
+        $("input#nbreGlobuleBlanc").val("");
+        $("input#nbreGlobuleBlanc").focus();
+        // print error message
+        $("#infoNbreGlobuleBlanc").html("Le nombre de globules blancs ne doit pas être nul.");
+        $("#infoNbreGlobuleBlanc").css("display","block");
+        return false
     }
-
-}
-
-// Cette méthode vérifie que l'utilisateur a saisie une valeur supérieur à s
-function nestPasEgalAZero(){
-
-    // Si le nombre de parasites, le nombre de globule et le nombre
-    // de globule blanc par micro litre de sang est null alors on renvoie une exception
-    if(document.getElementById("nbreParasite").value == 0 &&
-       document.getElementById("nbreGlobuleBlanc").value == 0 &&
-       document.getElementById("nbreGloBlancSang").value == 0){
-
-        document.getElementById("infoNbreParasite").innerHTML = "Le nombre de parasites doit être supérieur à 0 !";
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Le nombre de globule blanc doit être supérieur à 0 !";
-        document.getElementById("infoNbreGloBlancSang").innerHTML = "Le nombre de Globules blancs/µ de sang être supérieur à 0 !";
-
-        // On affiche le message d'erreur en fonction du paramètre
-        afficherErreur(4);
-
+    // nombre de globules blancs / µL de sang
+    if ( !$.isNumeric( $("input#nbreGloBlancSang").val() ) ){
+        // clean data and focus on input
+        $("input#nbreGloBlancSang").val("");
+        $("input#nbreGloBlancSang").focus();
+        // print error message
+        $("#infoNbreGloBlancSang").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
+        $("#infoNbreGloBlancSang").css("display","block");
+        
         return false;
-
-        // Si le nombre de parasites et le nombre de globules blanc est null
-    }else if(document.getElementById("nbreParasite").value == 0 && document.getElementById("nbreGlobuleBlanc").value == 0){
-
-        document.getElementById("infoNbreParasite").innerHTML = "Le nombre de parasites doit être supérieur à 0 !";
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Le nombre de globule blanc doit être supérieur à 0 !";
-
-        // On affiche le message d'erreur en fonction du paramètre
-        afficherErreur(0);
-        afficherErreur(1);
-
-        return false;
-
-        // Si le nombre de parasites est null
-    }else if(document.getElementById("nbreParasite").value == 0) {
-
-        document.getElementById("infoNbreParasite").innerHTML = "Le nombre de parasites doit être supérieur à 0 !";
-        afficherErreur(0);
-
-        return false;
-
-        // Si le nombre de globule blanc est null
-    }else if(document.getElementById("nbreGlobuleBlanc").value == 0){
-
-        document.getElementById("infoNbreGlobuleBlanc").innerHTML = "Le nombre de globule blanc doit être supérieur à 0 !";
-        afficherErreur(1);
-
-        return false;
-
-        // si le nombre de globule blanc par micro litre de sang est null
-    }else if(document.getElementById("nbreGloBlancSang").value == 0){
-        document.getElementById("infoNbreGloBlancSang").innerHTML = "Le nombre de Globules blancs/µ de sang être supérieur à 0 !";
-        afficherErreur(2);
-
-        return false;
-    }else{
-        return true;
     }
+    // si tout c'est bien passé
+    return true;
 
 }
 
 
 // Fonction permettant d'afficher la date et l'heure en temps réel
-function date_heure(id)
+function afficher_date_heure(id)
 {
     // Création d'une instance de date
     date = new Date;
@@ -224,19 +123,10 @@ function date_heure(id)
     annee = date.getFullYear();
 
     // Récupération du mois
-    mois = date.getMonth();
-
-    // Tableau contenant tous les mois de l'année
-    listeMois = new Array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
+    mois = date.getMonth() + 1;
 
     // Récupération de la date du jour
     j = date.getDate();
-
-    // On récupère le jour en cours
-    jour = date.getDay();
-
-    // Tableau des numéros des jours
-    jours = new Array('01', '02', '03', '04', '05', '06', '07');
 
     // Récupération de l'heure en cours
     h = date.getHours();
@@ -252,27 +142,11 @@ function date_heure(id)
         m = "0"+m;
     }
 
-    // Récupération des secondes
-    s = date.getSeconds();
+    // Formatage du résultat
+    resultat = j+'/'+mois+'/'+annee+' '+h+':'+m;
 
-    if(s<10) { // Si c'est une unité, on ajoute un 0 devant pour avoir une dizaines
-        s = "0"+s;
-    }
-
-    // Formatage du résultat de la date et l'heure à afficher
-    resultat = j+'/'+listeMois[mois]+'/'+annee+' '+h+':'+m+':'+s;
-
-    // On affiche la date et l'heure grâce à la méthode innerHTML
-    document.getElementById(id).innerHTML = resultat;
-
-    /**
-     * La méthode setTimeout() prend deux arguments: le nom de la méthode à exécuter,
-     * et l'intervalle de temps(en millisecondes) à attendre avant de le
-     * faire (en millisecondes) à attendre avant de le faire
-     *
-     * L'astuce, c'est de relancer la fonction date_heure à l'intérieur d'elle-même pour réaliser une boucle infinie
-     * */
-    setTimeout('date_heure("'+id+'");','1000');
+    // On affiche la date et l'heure
+    $(id).val(resultat);
 
     return true; // rtourne vraie
 }
