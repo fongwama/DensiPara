@@ -20,6 +20,10 @@
     <!-- build only for android -->
     <platform name="android" />
 
+    <!-- icon -->
+    <icon src="icon.png" />
+
+
     <!-- no permission required -->
     <preference name="permissions" value="none"/>
 
