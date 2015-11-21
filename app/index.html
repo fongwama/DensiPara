@@ -1,32 +1,87 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>densitePara web</title>
-		<link href="core.css" rel="stylesheet">
-	</head>
-	<body>
-		<div class="box">
-			<h2>Densité parasitaire</h2>
-			<hr>
- 				<label for="nbreParasite" class="label-style">nombre de parasites</label><br>
-				<input type="text" id="nbreParasite" class="box-style"><br>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body">
+        <!-- En-tête de la page -->
+        <header class="entete_principal">
+           <h1>DensitePara</h1>
 
-				<label for="nbreGlobuleBlanc" class="label-style" class="box-style">nombre de globules blancs</label><br>
-				<input type="text" id="nbreGlobuleBlanc" class="box-style"><br>
+            <nav>
+                <ul>
+                    <li><a href="guide.html"> Guide </a></li>
+                    <li><a href="apropos.html"> A propos </a></li>
+                </ul>
+            </nav>
+        </header>
 
-				<label for="nbreGloBlancSang" class="label-style">nombre de globules blancs/mµ de sang</label><br>
-				<input type="number" id ="nbreGloBlancSang" class="box-style">
+    <!-- Contenu de la page -->
+    <div class="contenu_principal">
 
-				<hr>
+        <section>
+            <article class="formulaire">
 
-				<button class="btn-style label-style" onClick="calculer()">Calculer</button>
-				<button class="btn-style label-style" onClick="reset(['nbreParasite','nbreGlobuleBlanc'])">Réinitialiser</button>
+                <form method="post" action="retun false;"  class="frmTraitement">
+                    <div>
+                        <label for="nbreParasite">Nombre de parasites <sup><img src="img/asterisk.gif"/></sup></label>
+                        <input name="nbreParasite" type="text" id="nbreParasite">
+                        <span id="infoNbreParasite"></span>
+                    </div>
 
-				<br>
-				<h2 id="densite" class="h2-style">Densite</h2>
-		</div>
+                    <div>
+                        <label for="nbreGlobuleBlanc">Nombre de globules blancs<sup><img src="img/asterisk.gif"/></sup></label>
+                        <input name="nbreGlobuleBlanc" type="text" id="nbreGlobuleBlanc">
+                        <span id="infoNbreGlobuleBlanc"></span>
+                    </div>
 
-		<script type="text/javascript" src="core.js"></script>
-	</body>
+                    <div>
+                        <label for="nbreGloBlancSang">Nombre de globules blancs / µL de sang<sup><img src="img/asterisk.gif"/></sup></label>
+                        <input name="nbreGloBlancSang" type="text" id="nbreGloBlancSang">
+                        <span id="infoNbreGloBlancSang"></span>
+                    </div>
+
+                    <div>
+                        <input id="calculer" name="calculer" type="button" value="Calculer" />
+                        <input id="reinitialiser" name="reinitialiser" type="button" value="Réinitialiser" />
+                    </div>
+
+                    <!-- Résultat du calcul -->
+                    <div class="div_resultat">
+                        <label for="nbreGloBlancSang" class="lbldensitePara">Densité parasitaire</label>
+                        <span name="resultat" id="densite"></span><br/>
+                        <label><em>parasites / µL de sang</em></label>
+                    </div>
+
+                    <div>
+                        <label for="numeroReference">Numéro de référence</label>
+                        <input id="numeroReference" name="numeroReference" type="text"/>
+                    </div>
+                    <div>
+                        <label>Date et heure</label>
+                        <input id="date_heure" name="date_heure" type="text"/>
+                    </div>
+
+                </form>
+            </article>
+        </section>
+
+        <!-- Pied de page de la page-->
+        <footer>
+                <div class="date_time">
+                    <span id="fongwama"><em> Copyright &copy Fongwama 2015 </em></span>
+                </div>
+        </footer>
+    </div>
+
+    <!-- Chargement du javaScript : la library JavaScript nommée JQuery version minimal a été
+        utilisé, ce choix est due par le fait que JQuery est un standard et support pas mal de
+        navigateur web.
+     -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/traitements.js"></script>
+</body>
 </html>
