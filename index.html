@@ -28,19 +28,19 @@
                 <form method="post" action="retun false;"  class="frmTraitement">
                     <div>
                         <label for="nbreParasite">Nombre de parasites <sup><img src="img/asterisk.gif"/></sup></label>
-                        <input name="nbreParasite" type="text" id="nbreParasite">
+                        <input name="nbreParasite" type="text" id="nbreParasite" class="isnumber">
                         <span id="infoNbreParasite"></span>
                     </div>
 
                     <div>
                         <label for="nbreGlobuleBlanc">Nombre de globules blancs<sup><img src="img/asterisk.gif"/></sup></label>
-                        <input name="nbreGlobuleBlanc" type="text" id="nbreGlobuleBlanc">
+                        <input name="nbreGlobuleBlanc" type="text" id="nbreGlobuleBlanc" class="isnumber">
                         <span id="infoNbreGlobuleBlanc"></span>
                     </div>
 
                     <div>
                         <label for="nbreGloBlancSang">Nombre de globules blancs / µL de sang<sup><img src="img/asterisk.gif"/></sup></label>
-                        <input name="nbreGloBlancSang" type="text" id="nbreGloBlancSang">
+                        <input name="nbreGloBlancSang" type="text" id="nbreGloBlancSang" class="isnumber">
                         <span id="infoNbreGloBlancSang"></span>
                     </div>
 
@@ -51,9 +51,8 @@
 
                     <!-- Résultat du calcul -->
                     <div class="div_resultat">
-                        <label for="nbreGloBlancSang" class="lbldensitePara">Densité parasitaire</label>
-                        <span name="resultat" id="densite"></span><br/>
-                        <label><em>parasites / µL de sang</em></label>
+                        <label for="nbreGloBlancSang" class="lbldensitePara">Densité parasitaire (parasites / µL de sang)</label>
+                        <input id="densite" name="resultat" type="text" readonly="true">
                     </div>
 
                     <div>
@@ -62,7 +61,7 @@
                     </div>
                     <div>
                         <label>Date et heure</label>
-                        <input id="date_heure" name="date_heure" type="text"/>
+                        <input id="date_heure" name="date_heure" type="text" readonly="true"/>
                     </div>
 
                 </form>
@@ -71,8 +70,8 @@
 
         <!-- Pied de page de la page-->
         <footer>
-                <div class="date_time">
-                    <span id="fongwama"><em> Copyright &copy Fongwama 2015 </em></span>
+                <div class="pied_page">
+                    <span id="fongwama"><em>Fongwama 2015 </em></span>
                 </div>
         </footer>
     </div>
@@ -83,6 +82,5 @@
      -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/traitements.js"></script>
-    <script type="text/javascript" src="phonegap.js"></script>
 </body>
 </html>

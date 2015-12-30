@@ -34,36 +34,17 @@ section{
 	width: 100%;
 }
 
-.date_time{
-	font-size: 20px;
-	margin: 40px 10px 5px 10px; /** Respectivement top, right, bottom, left**/
-}
-
-.page_content{
-	height: 600px;
-	font-size: 16px;
-	font-family: "Myriad Pro", Arial, sans-serif;
-}
-
-#fongwama{
-	color: #797979;
-	float: right;
-
-}
-
 .pied_page{
+	font-size: 16px;
+	margin: 6px;
 	text-align: right;
-	margin: 10px;
-	color:#797979;
-}
-
-.copyright{
-
+	color: #797979;
+	font-weight: bold;
 }
 
 #date_heure{
-	font-size: 20px;
-	color: #CF5C3F;
+	font-size: 16px;
+	color: #797979;
 	font-weight: bold;
 }
 
@@ -76,7 +57,6 @@ section{
 
 .frmTraitement{
 	margin: 20px auto 20px auto;
-	/*border: 1px solid red;*/
 }
 
 .frmTraitement div{
@@ -97,21 +77,12 @@ section{
 	color: #CF5C3F;
 }
 
-em{
-	font-weight: bold;
-}
 
 label{
 	display: block;
 	margin-left: 30px;
 	color: #797979;
 	font-size: 18px;
-}
-
-#densite{
-	font-weight: bold;
-	font-size: 4em;
-	color: red;
 }
 
 input{
@@ -122,16 +93,11 @@ input{
 	color: #797979;
 }
 
-.div_resultat {
-	/*border: 1px solid magenta;*/
-	text-align: center;
-	height: 125px;
-}
-.lbldensitePara{
-	font-size: 2em;
+.lbldensitePara, #densite{
 	font-weight: bold;
-	margin-bottom:30px;
+	color: black;
 }
+
 h1{
 	color: #FFFFFF;
 	margin-top: 20px;
@@ -188,7 +154,7 @@ a:hover, a:active{
 	height:18px;
 }
 
-.entete_principal nav a:hover, .entete_principal nav a:active, 
+.entete_principal nav a:hover, .entete_principal nav a:active,
 .entete_principal nav .active a:link, .entete_principal nav .active a:visited{
 	background-color:#CF5C3F;
 	text-shadow: none;
@@ -201,56 +167,19 @@ a:hover, a:active{
 }
 
 .Contenu_Principal{
-	line-height: 25px; 
+	line-height: 25px;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
-
-.contenu{
-	width:70%;
-	float: left;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-
-
-
-.contenuCFI{
-	background-color: #FFF;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 3% 5%;
-	margin-top:2%;
-}
-
-.piedPage_principal{
-	width: 100%;
-	height:40px;
-	float: left;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background-color: #666;
-	margin: 2% 0;
-	
-}
-
-.piedPage_principal p{
-	width:92%;
-	margin: 10px auto;
-	color: #FFF;
-}
-
+/**
 @media only screen and (min-width: 150px) and (max-width:600px){
 	.body{
 		width:90%;
 		font-size:95%;
 	}
-	
+
 	.entete_principal nav{
 		height: 240px;
 	}
@@ -269,24 +198,9 @@ a:hover, a:active{
 		height:0px;
 		display: block;
 	}
-	
+
 	.Contenu_Principal{
 		overflow: hidden;
 	}
-	
-	.contenu{
-		width:70%;
-		float: left;
-		margin-top: 2%;
-	}
-	
-	.info_post{
-		display: none;	
-	}
 
-
-	.contenuCFI{
-		margin-top:3%;
-	}
-
-}
+}*/
