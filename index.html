@@ -27,41 +27,41 @@
 
                 <form method="post" action="retun false;"  class="frmTraitement">
                     <div>
-                        <label for="nbreParasite">Nombre de parasites</label>
-                        <input name="nbreParasite" type="text" id="nbreParasite" class="isnumber">
-                        <span id="infoNbreParasite"></span>
+                        <label id="label_nb_parasite">Nombre de parasites</label>
+                        <input id="input_nb_parasite" type="text"  class="isnumber">
+                        <span id="info_nb_parasite"></span>
                     </div>
 
                     <div>
-                        <label for="nbreGlobuleBlanc">Nombre de globules blancs</label>
-                        <input name="nbreGlobuleBlanc" type="text" id="nbreGlobuleBlanc" class="isnumber">
-                        <span id="infoNbreGlobuleBlanc"></span>
+                        <label id="label_nb_wbc">Nombre de globules blancs</label>
+                        <input id="input_nb_wbc" type="text" class="isnumber">
+                        <span id="info_nb_wbc"></span>
                     </div>
 
                     <div>
-                        <label for="nbreGloBlancSang">Nombre de globules blancs / µL de sang</label>
-                        <input name="nbreGloBlancSang" type="text" id="nbreGloBlancSang" class="isnumber">
-                        <span id="infoNbreGloBlancSang"></span>
+                        <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
+                        <input id="input_nb_wbc_blood" type="text" class="isnumber">
+                        <span id="info_nb_wbc_blood"></span>
                     </div>
 
                     <div class="actions">
-                        <input id="calculer" name="calculer" type="button" value="Calculer" />
-                        <input id="reinitialiser" name="reinitialiser" type="button" value="Réinitialiser" />
+                        <input id="button_compute"  type="button" value="Calculer" />
+                        <input id="button_reset"  type="button" value="Réinitialiser" />
                     </div>
 
                     <!-- Résultat du calcul -->
                     <div class="div_resultat">
-                        <label for="nbreGloBlancSang" class="lbldensitePara">Densité parasitaire (parasites / µL de sang)</label>
-                        <input id="densite" name="resultat" type="text" readonly="true">
+                        <label id="label_parasitemia">Densité parasitaire (parasites / µL de sang)</label>
+                        <input id="input_parasitemia" type="text" readonly="true">
                     </div>
 
                     <div>
-                        <label for="numeroReference">Numéro de référence</label>
-                        <input id="numeroReference" name="numeroReference" type="text"/>
+                        <label id="label_ref_id">Numéro de référence</label>
+                        <input id="input_ref_id" type="text"/>
                     </div>
                     <div>
-                        <label>Date et heure</label>
-                        <input id="date_heure" name="date_heure" type="text" readonly="true"/>
+                        <label id="label_date_time">Date et heure</label>
+                        <input id="input_date_time" type="text" readonly="true" />
                     </div>
 
                 </form>
@@ -70,7 +70,7 @@
 
         <!-- Pied de page de la page-->
         <footer>
-                <div class="pied_page">
+                <div class="footer">
                     <span id="fongwama"><em>Fongwama 2015 </em></span>
                 </div>
         </footer>

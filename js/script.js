@@ -2,63 +2,46 @@
  * Created by Aristide Ciriaque on 12/11/2015.
  */
 $(document).ready(function(){
-    /**
-     * Validation des données
-     */
+    // default value for the number of white blood cell / microlitre of blood
+    $('#input_nb_wbc_blood').val(8000);
 
-        //fixer la valeur par défaut du nombre de globules blancs par microlitre de sang
-    $('#nbreGloBlancSang').val(8000);
-
-    // Méthode permettant de calculer la densité parasitaire
-    $("#calculer").click(function(){
-        calculer();
+    // action to compute parasitemia
+    $("#button_compute").click(function(){
+        compute_parasitemia();
     });
 
-    // Mask les erreurs suite à un appui sur le bouton
-    $("#nbreParasite").keyup(function(){
-        $("#infoNbreParasite").css("display","none;").fadeOut(500);
+    // hide error message once enter input field
+    $("#input_nb_parasite").keyup(function(){
+        $("#info_nb_parasite").css("display","none;").fadeOut(500);
+    });
+    $("#input_nb_wbc").keyup(function(){
+        $("#info_nb_wbc").css("display","none;").fadeOut(500);
+    });
+    $("#input_nb_wbc_blood").keyup(function(){
+        $("#info_nb_wbc_blood").css("display","none;").fadeOut(500);
     });
 
-    $("#nbreGlobuleBlanc").keyup(function(){
-        $("#infoNbreGlobuleBlanc").css("display","none;").fadeOut(500);
-    });
-
-    $("#nbreGloBlancSang").keyup(function(){
-        $("#infoNbreGloBlancSang").css("display","none;").fadeOut(500);
-    });
-
-    // Réinitialisation des champs
-    $("#reinitialiser").click(function() {
-        reset();
+    // reset form
+    $("#button_reset").click(function() {
+        $("#input_nb_parasite").val("");
+        $("#input_nb_wbc").val("");
+        $("#input_parasitemia").val("");
+        $("#input_ref_id").val("");
     });
 
 
     // Appel de la fonction d'affichage de l'heure
-    afficher_date_heure("#date_heure");
+    print_date_time("#input_date_time");
 });
 
 
 // Méthode permettant de calculer la densité parasitaire
-function calculer() {
+function compute_parasitemia() {
     if(check_input_data()) { // Si l'utilisateur à tout renseigner, alors
-        var resultat = $("#nbreParasite").val() * $("#nbreGloBlancSang").val() / $("#nbreGlobuleBlanc").val();
-        $("#densite").val(Math.round(resultat));
+        var resultat = $("#input_nb_parasite").val() * $("#input_nb_wbc_blood").val() / $("#input_nb_wbc").val();
+        $("#input_parasitemia").val(Math.round(resultat));
     }
-    afficher_date_heure("#date_heure");
-}
-
-
-/*
- réinitialiser les champs de saisies
- @param arguments : liste des id des composants é vider.
- */
-function reset ()
-{
-    $("#nbreParasite").val("");
-    $("#nbreGlobuleBlanc").val("");
-    $("#densite").val("");
-    $("#numeroReference").val("");
-
+    print_date_time("#input_date_time");
 }
 
 
@@ -66,45 +49,45 @@ function check_input_data() {
     // check in input fields are nummbers
     //
     // nombre de parasites
-    if ( !$.isNumeric( $("input#nbreParasite").val() ) ){
+    if ( !$.isNumeric( $("#input_nb_parasite").val() ) ){
+            alert( $("#input_nb_parasite").val() );
         // clean data and focus on input
-        $("input#nbreParasite").val("");
-        $("input#nbreParasite").focus();
+        $("#input_nb_parasite").val("");
+        $("#input_nb_parasite").focus();
         // print error message
-        $("#infoNbreParasite").html("Veuillez saisir le nombre de parasites.");
-        $("#infoNbreParasite").css("display","block");
+        $("#info_nb_parasite").html("Veuillez saisir le nombre de parasites.");
+        $("#info_nb_parasite").css("display","block");
         return false;
     }
     // nombre de globules blancs
     // doit impérativement être différent de 0
-    if ( !$.isNumeric( $("input#nbreGlobuleBlanc").val() ) ){
+    if ( !$.isNumeric( $("#input_nb_wbc").val() ) ){
         // clean data and focus on input
-        $("input#nbreGlobuleBlanc").val("");
-        $("input#nbreGlobuleBlanc").focus();
+        $("#input_nb_wbc").val("");
+        $("#input_nb_wbc").focus();
         // print error message
-        $("#infoNbreGlobuleBlanc").html("Veuillez saisir le nombre de globules blancs.");
-        $("#infoNbreGlobuleBlanc").css("display","block");
+        $("#info_nb_wbc").html("Veuillez saisir le nombre de globules blancs.");
+        $("#info_nb_wbc").css("display","block");
         return false;
         // nombre de globules blancs
         // doit impérativement être différent de 0
-    }else if ( $("input#nbreGlobuleBlanc").val() == 0 ) {
+    }else if ( $("#input_nb_wbc").val() == 0 ) {
         // clean data and focus on input
-        $("input#nbreGlobuleBlanc").val("");
-        $("input#nbreGlobuleBlanc").focus();
+        $("#input_nb_wbc").val("");
+        $("#input_nb_wbc").focus();
         // print error message
-        $("#infoNbreGlobuleBlanc").html("Le nombre de globules blancs ne doit pas être nul.");
-        $("#infoNbreGlobuleBlanc").css("display","block");
+        $("#info_nb_wbc").html("Le nombre de globules blancs ne doit pas être nul.");
+        $("#info_nb_wbc").css("display","block");
         return false
     }
     // nombre de globules blancs / µL de sang
-    if ( !$.isNumeric( $("input#nbreGloBlancSang").val() ) ){
+    if ( !$.isNumeric( $("#input_nb_wbc_blood").val() ) ){
         // clean data and focus on input
-        $("input#nbreGloBlancSang").val("");
-        $("input#nbreGloBlancSang").focus();
+        $("#input_nb_wbc_blood").val("");
+        $("#input_nb_wbc_blood").focus();
         // print error message
-        $("#infoNbreGloBlancSang").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
-        $("#infoNbreGloBlancSang").css("display","block");
-
+        $("#info_nb_wbc_blood").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
+        $("#info_nb_wbc_blood").css("display","block");
         return false;
     }
     // si tout c'est bien passé
@@ -113,40 +96,32 @@ function check_input_data() {
 }
 
 
-// Fonction permettant d'afficher la date et l'heure en temps réel
-function afficher_date_heure(id)
+// function to build date and time
+function print_date_time(id)
 {
-    // Création d'une instance de date
+    // create new Date instance
     date = new Date;
-
-    // Récupération de l'année
-    annee = date.getFullYear();
-
-    // Récupération du mois
-    mois = date.getMonth() + 1;
-
-    // Récupération de la date du jour
-    j = date.getDate();
-
-    // Récupération de l'heure en cours
+    // get year
+    year = date.getFullYear();
+    // get month
+    month = date.getMonth() + 1;
+    // get day
+    day = date.getDate();
+    // get hours
     h = date.getHours();
-
-    if(h<10){ // Si c'est une unité, on ajoute un 0 devant pour avoir une dizaines
+    // add '0' if hours < 10
+    if(h<10){
         h = "0"+h;
     }
-
-    // Récupération des minutes
+    // get minutes
     m = date.getMinutes();
-
-    if(m<10) { //  // Si c'est une unité, on ajoute un 0 devant pour avoir une dizaines
+    // add '0' if minutes < 10
+    if(m<10) {
         m = "0"+m;
     }
-
-    // Formatage du résultat
-    resultat = j+'/'+mois+'/'+annee+' '+h+':'+m;
-
-    // On affiche la date et l'heure
-    $(id).val(resultat);
-
-    return true; // rtourne vraie
+    // format ouput
+    output= day+'/'+month+'/'+year+' '+h+':'+m;
+    // print date and time
+    $(id).val(output);
+    return true; 
 }
