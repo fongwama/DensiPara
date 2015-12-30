@@ -1,5 +1,9 @@
 /**
  * Created by Aristide Ciriaque NDIELE on 26/11/2015.
+ *
+ * Cette énumeration n'est pas utiliser pour le moment
+ * Elle pourra nous servir quand nous allons implémenter
+ * la fonctionnalité de multi-langue.
  */
 var enm_messages = {
 

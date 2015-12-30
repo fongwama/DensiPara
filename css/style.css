@@ -98,6 +98,7 @@ input{
 	color: black;
 }
 
+
 h1{
 	color: #FFFFFF;
 	margin-top: 20px;
@@ -173,34 +174,97 @@ a:hover, a:active{
 	-webkit-border-radius: 5px;
 }
 
-/**
-@media only screen and (min-width: 150px) and (max-width:600px){
+
+/** Si l'application s'exécute sur un terminal mobile
+	dont la largeur minimal est de 320 pixel, la mise en
+	page ci-dessous est appliquée
+**/
+@media only screen and (min-width: 320px) and (max-width:800px){
+
+	body{
+		background-color: #fff;
+		background-position: 0% 0;
+		font-size: 87.5%; /* La taille de est 14px */
+		font-family: "Myriad Pro", Arial, sans-serif;
+		line-height: 20px;
+		text-align: left;
+	}
+
 	.body{
-		width:90%;
-		font-size:95%;
+		margin: 0 auto;
+		clear: both;
+		width: 100%;
+	}
+
+	.entete_principal{
+		height: 100px;
 	}
 
 	.entete_principal nav{
-		height: 240px;
+		margin: 21px auto;
 	}
 
-	.entete_principal nav ul {
-		padding-left: 0
+
+	.lbldensitePara{
+		font-size: 13.4px;
 	}
 
-	.entete_principal nav ul li {
-		width: 100%;
+
+	label, input{
+		font-size: 16px;
+		margin-left: 1%;
+	}
+
+	input{
+		width: 97%;
+	}
+
+	.formulaire{
+		margin: 10px auto 20px auto;
+		padding: 1%;
+	}
+
+	.frmTraitement div{
+		margin: 2px;
+	}
+
+	#infoNbreParasite, #infoNbreGlobuleBlanc, #infoNbreGloBlancSang{
+		margin-left: 1%;
+	}
+
+	.actions{
 		text-align: center;
 	}
+	#calculer, #reinitialiser{
+		margin-top: 10px;
+		height: 50px;
+		width: 75%;
+		margin-bottom: 7px;
+		border-radius: 5px;
 
-	.entete_principal nav a:link, .entete_principal nav a:visited{
-		padding: 20px 25px;
-		height:0px;
-		display: block;
+		-moz-box-shadow: 02px 02px 2px 0px #656565;
+		-webkit-box-shadow: 02px 02px 2px 0px #656565;
+		-o-box-shadow: 02px 02px 2px 0px #656565;
+		box-shadow: 02px 02px 2px 0px #656565;
 	}
 
-	.Contenu_Principal{
-		overflow: hidden;
+
+	.contenu_principal{
+		border: 1px solid #656565;
+		-moz-box-shadow: 05px 05px 5px 0px #656565;
+		-webkit-box-shadow: 05px 05px 5px 0px #656565;
+		-o-box-shadow: 05px 05px 5px 0px #656565;
+		box-shadow: 05px 05px 5px 0px #656565;
+
+		line-height: 15px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+
+		filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
 	}
 
-}*/
+
+
+
+}
