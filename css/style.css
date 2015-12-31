@@ -124,8 +124,6 @@ a:hover, a:active{
 .entete_principal nav{
 	background-color: #666;
 	height: 40px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	margin: 48px auto;
 }
 
