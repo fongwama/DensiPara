@@ -2,7 +2,7 @@ body{
 	background-color: #fff;
 	background-position: 0% 0;
 	font-size: 87.5%; /* La taille de est 14px */
-	font-family: "Myriad Pro", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 20px;
 	text-align: left;
 	overflow:auto;
@@ -164,7 +164,7 @@ a:hover, a:active{
 		background-color: #fff;
 		background-position: 0% 0;
 		font-size: 87.5%; /* La taille de est 14px */
-		font-family: "Myriad Pro", Arial, sans-serif;
+		font-family: Arial, sans-serif;
 		line-height: 20px;
 		text-align: left;
 	}
