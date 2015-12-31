@@ -254,5 +254,9 @@ a:hover, a:active{
 
 		filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
 	}
+    
+    .quality_control {
+    display : none;
+    }
 
 }
