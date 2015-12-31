@@ -23,10 +23,13 @@ $(document).ready(function(){
 
     // reset form
     $("#button_reset").click(function() {
+        // clean all input fields but input_nb_wbc_blood (default value)
         $("#input_nb_parasite").val("");
         $("#input_nb_wbc").val("");
         $("#input_parasitemia").val("");
         $("#input_ref_id").val("");
+        // put focus on the first input field
+        $("#input_nb_parasite").focus();
     });
 
 
@@ -41,6 +44,7 @@ function compute_parasitemia() {
         var resultat = $("#input_nb_parasite").val() * $("#input_nb_wbc_blood").val() / $("#input_nb_wbc").val();
         $("#input_parasitemia").val(Math.round(resultat));
     }
+    // update date and time
     print_date_time("#input_date_time");
 }
 
