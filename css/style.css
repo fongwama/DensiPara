@@ -125,16 +125,7 @@ a:hover, a:active{
 	background-color: #666;
 	height: 40px;
 	margin: 48px auto;
-}
-
-.entete_principal nav ul {
-	list-style: none;
-	margin: 0 auto;
-}
-
-.entete_principal nav ul li {
-	float: left;
-	display: inline;
+    padding-left: 25px;
 }
 
 .entete_principal nav a:link, .entete_principal nav a:visited{
@@ -150,7 +141,7 @@ a:hover, a:active{
 	text-shadow: none;
 }
 
-.entete_principal nav ul li a{
+.entete_principal nav a{
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
