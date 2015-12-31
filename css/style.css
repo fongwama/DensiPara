@@ -6,6 +6,9 @@ body{
 	line-height: 20px;
 	text-align: left;
 	overflow:auto;
+	margin: 0 auto;
+	width:50%;
+	clear: both;
 }
 
 .contenu_principal{
@@ -34,12 +37,11 @@ section{
 	width: 100%;
 }
 
-.footer{
-	font-size: 16px;
+footer{
 	margin: 6px;
 	text-align: right;
 	color: #797979;
-	font-weight: bold;
+    font-style: italic;
 }
 
 #info_nb_parasite, #info_nb_wbc, #info_nb_wbc_blood{
@@ -109,11 +111,7 @@ a:hover, a:active{
 	color:#FFF;
 }
 
-.body{
-	margin: 0 auto;
-	width:50%;
-	clear: both;
-}
+
 
 .entete_principal{
 	background-color: #999999;
@@ -167,10 +165,7 @@ a:hover, a:active{
 		font-family: Arial, sans-serif;
 		line-height: 20px;
 		text-align: left;
-	}
-
-	.body{
-		margin: 0 auto;
+        margin: 0 auto;
 		clear: both;
 		width: 100%;
 	}
