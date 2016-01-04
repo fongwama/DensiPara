@@ -149,8 +149,17 @@ footer{
         color: #FFFFFF;
         padding-top: 10px;
         padding-bottom: 10px;
+        padding-left: 20px;
     }
 
+    nav{
+        padding-left: 10px;
+    }
+    
+    nav a:link,  nav a:visited{
+        padding: 11px 10px;
+    }
+    
 	form{
 		margin: 0px;
 		padding: 1%;
