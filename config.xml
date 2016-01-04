@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fongwama.densitepara"
         versionCode = "10" 
-        version     = "0.2.0" >
+        version     = "1.0.0" >
     <!-- versionCode is optional and Android only -->
     
 
