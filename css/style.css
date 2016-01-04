@@ -171,6 +171,7 @@ footer{
 	form input[type="button"]{
 		margin-top: 10px;
         margin-bottom: 7px;
+        margin-right: 0px;
 		height: 50px;
 		width: 75%;
 		border-radius: 5px;
