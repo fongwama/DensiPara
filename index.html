@@ -7,63 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-        <!-- En-tête de la page -->
-        <header class="entete_principal">
-            <h1>DensitePara</h1>
-            <nav>
-                <a href="guide.html"> Guide </a>
-                <a href="apropos.html"> A propos </a>
-            </nav>
-        </header>
+    
+    <div class="content_full">
+    
+    <!-- header -->
+    <header class="entete_principal">
+        <h1>DensitePara</h1>
+        <nav>
+            <a href="guide.html">Guide</a>
+            <a href="apropos.html">A propos</a>
+        </nav>
+    </header>
 
-    <!-- Contenu de la page -->
-    <div class="contenu_principal">
-
-        <section>
-            <article class="formulaire">
-
-                <form method="post" action="retun false;"  class="frmTraitement">
-                    <div>
-                        <label id="label_nb_parasite">Nombre de parasites</label>
-                        <input id="input_nb_parasite" type="text"  class="isnumber">
-                        <span id="info_nb_parasite"></span>
-                    </div>
-
-                    <div>
-                        <label id="label_nb_wbc">Nombre de globules blancs</label>
-                        <input id="input_nb_wbc" type="text" class="isnumber">
-                        <span id="info_nb_wbc"></span>
-                    </div>
-
-                    <div>
-                        <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
-                        <input id="input_nb_wbc_blood" type="text" class="isnumber">
-                        <span id="info_nb_wbc_blood"></span>
-                    </div>
-
-                    <div class="actions">
-                        <input id="button_compute"  type="button" value="Calculer" />
-                        <input id="button_reset"  type="button" value="Réinitialiser" />
-                    </div>
-
-                    <!-- Résultat du calcul -->
-                    <div class="div_resultat">
-                        <label id="label_parasitemia">Densité parasitaire (parasites / µL de sang)</label>
-                        <input id="input_parasitemia" type="text" readonly="true">
-                    </div>
-
-                    <div class="quality_control">
-                        <label id="label_ref_id">Numéro de référence</label>
-                        <input id="input_ref_id" type="text"/>
-                    </div>
-                    <div class="quality_control">
-                        <label id="label_date_time">Date et heure</label>
-                        <input id="input_date_time" type="text" readonly="true" />
-                    </div>
-
-                </form>
-            </article>
-        </section>
+    <!-- content / form -->
+    <section>
+        <article>
+            <form method="post" action="retun false;">
+                <div>
+                    <label id="label_nb_parasite">Nombre de parasites</label>
+                    <input id="input_nb_parasite" type="text">
+                    <span id="info_nb_parasite" class="info"></span>
+                </div>
+                <div>
+                    <label id="label_nb_wbc">Nombre de globules blancs</label>
+                    <input id="input_nb_wbc" type="text">
+                    <span id="info_nb_wbc" class="info"></span>
+                </div>
+                <div>
+                    <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
+                    <input id="input_nb_wbc_blood" type="text">
+                    <span id="info_nb_wbc_blood" class="info"></span>
+                </div>
+                <div class="actions">
+                    <input id="button_compute" type="button" value="Calculer" />
+                    <input id="button_reset" type="button" value="Réinitialiser" />
+                </div>
+                <div>
+                    <label id="label_parasitemia" class="parasitemia">Densité parasitaire (parasites / µL de sang)</label>
+                    <input id="input_parasitemia" class="parasitemia" type="text" readonly="true">
+                </div>
+                <div class="quality_control">
+                    <label id="label_ref_id">Numéro de référence</label>
+                    <input id="input_ref_id" type="text"/>
+                </div>
+                <div class="quality_control">
+                    <label id="label_date_time">Date et heure</label>
+                    <input id="input_date_time" type="text" />
+                </div>
+            </form>
+        </article>
+    </section>
 
     <!-- footer -->
     <footer>
@@ -71,7 +64,7 @@
     </footer>
     </div>
 
-    <!-- load javascript -->
+    <!-- load javascripts -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

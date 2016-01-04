@@ -1,7 +1,7 @@
 body{
-	background-color: #fff;
+	background-color: #ffffff;
 	background-position: 0% 0;
-	font-size: 87.5%; /* La taille de est 14px */
+	font-size: 110%;
 	font-family: Arial, sans-serif;
 	line-height: 20px;
 	text-align: left;
@@ -11,25 +11,52 @@ body{
 	clear: both;
 }
 
-.contenu_principal{
-	border: 1px solid #656565;
-	-moz-box-shadow: 05px 05px 5px 0px #656565;
-	-webkit-box-shadow: 05px 05px 5px 0px #656565;
-	-o-box-shadow: 05px 05px 5px 0px #656565;
-	box-shadow: 05px 05px 5px 0px #656565;
+.content_full{
+    border: 1px solid #656565;
+	-moz-box-shadow: 5px 5px 5px 0px #656565;
+	-webkit-box-shadow: 5px 5px 5px 0px #656565;
+	-o-box-shadow: 5px 5px 5px 0px #656565;
+	box-shadow: 5px 5px 5px 0px #656565;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
 }
-section{
-	margin: 2%;
+
+header{
+	background-color: #999999;
 }
 
-.formulaire{
-	border: 1px solid #999999;
-	max-width: 500px;
-	margin: 20px auto 20px auto;
-	padding: 20px;
-	box-shadow: #666666;
+h1{
+	color: #FFFFFF;
+	padding-top: 20px;
+    padding-bottom: 25px;
+	padding-left: 50px;
+    margin: 0px;
+    font-size: 1.5em;
+}
+
+nav{
+	background-color: #666666;
+    padding-left: 25px;
+}
+
+nav a:link,  nav a:visited{
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 11px 25px;
+}
+
+nav a:hover, nav a:active, nav .active a:link, nav .active a:visited{
+	background-color:#CF5C3F;
+	text-shadow: none;
+}
+
+nav a{
 	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+section {
+    padding: 10px;
 }
 
 .img{
@@ -37,65 +64,55 @@ section{
 	width: 100%;
 }
 
-footer{
-	margin: 6px;
-	text-align: right;
-	color: #797979;
-    font-style: italic;
+form{
+	border: 1px solid #999999;
+	max-width: 500px;
+	margin: 20px auto 20px auto;
+	padding: 10px;
+	box-shadow: #666666;
+	border-radius: 5px;
 }
 
-#info_nb_parasite, #info_nb_wbc, #info_nb_wbc_blood{
-	margin-left: 30px;
+form div{
+	margin: 20px;
+}
+
+label, input{
+	display: block;
+	color: #797979;
+}
+
+input{
+	width: 85%;
+	height: 30px;
+	font-size: 1em;
+}
+
+.info{
 	color: red;
 	display: block;
 	font-style: italic;
 }
 
-
-.frmTraitement div{
-	margin: 20px;
-}
-
-#button_compute, #button_reset{
+form input[type="button"]{
+	display: inline;
 	border: none;
 	padding: 0;
 	margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 30px;
 	cursor: pointer;
-	background-color: antiquewhite;
+	background-color: #faebd7;
 	transition: 0.3s;
 	height: 50px;
 	width: 175px;
-	margin-bottom:  20px;
-	font-size: 1.5em;
+	font-size: 1.1em;
 	color: #CF5C3F;
 }
 
-
-label{
-	display: block;
-	margin-left: 30px;
-	color: #797979;
-	font-size: 18px;
-}
-
-input{
-	width: 83%;
-	height: 30px;
-	margin-left: 30px;
-	font-size: 18px;
-	color: #797979;
-}
-
-#input_parasitemia, #label_parasitemia{
+.parasitemia{
 	font-weight: bold;
 	color: black;
-}
-
-
-h1{
-	color: #FFFFFF;
-	margin-top: 20px;
-	margin-left: 48px;
 }
 
 a{
@@ -108,48 +125,14 @@ a:link, a:visited{
 
 a:hover, a:active{
 	background-color:#CF5C3F;
-	color:#FFF;
+	color:#ffffff;
 }
 
-
-
-.entete_principal{
-	background-color: #999999;
-	height: 125px;
-	border: 1px solid #999999;
-}
-
-.entete_principal nav{
-	background-color: #666;
-	height: 40px;
-	margin: 48px auto;
-    padding-left: 25px;
-}
-
-.entete_principal nav a:link, .entete_principal nav a:visited{
-	color: #FFF;
-	display: inline-block;
-	padding: 11px 25px;
-	height:18px;
-}
-
-.entete_principal nav a:hover, .entete_principal nav a:active,
-.entete_principal nav .active a:link, .entete_principal nav .active a:visited{
-	background-color:#CF5C3F;
-	text-shadow: none;
-}
-
-.entete_principal nav a{
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-
-.Contenu_Principal{
-	line-height: 25px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+footer{
+	margin: 6px;
+	text-align: right;
+	color: #797979;
+    font-style: italic;
 }
 
 
@@ -159,88 +142,46 @@ a:hover, a:active{
 @media only screen and (min-width: 320px) and (max-width:800px){
 
 	body{
-		background-color: #fff;
-		background-position: 0% 0;
-		font-size: 87.5%; /* La taille de est 14px */
-		font-family: Arial, sans-serif;
-		line-height: 20px;
-		text-align: left;
-        margin: 0 auto;
-		clear: both;
 		width: 100%;
 	}
 
-	.entete_principal{
-		height: 100px;
-	}
+    h1{
+        color: #FFFFFF;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
-	.entete_principal nav{
-		margin: 21px auto;
-	}
-
-
-	.lbldensitePara{
-		font-size: 13.4px;
-	}
-
-
-	label, input{
-		font-size: 16px;
-		margin-left: 1%;
-	}
-
-	input{
-		width: 97%;
-	}
-
-	.formulaire{
-		margin: 10px auto 20px auto;
+	form{
+		margin: 0px;
 		padding: 1%;
 	}
 
-	.frmTraitement div{
-		margin: 2px;
-	}
+    form div{
+        margin: 5px;
+    }
 
-	#info_nb_parasite, #info_nb_wbc, #info_nb_wbc_blood{
-		margin-left: 1%;
+	input{
+		width: 97%;
 	}
 
 	.actions{
 		text-align: center;
 	}
     
-	#button_compute, #button_reset{
+	form input[type="button"]{
 		margin-top: 10px;
+        margin-bottom: 7px;
 		height: 50px;
 		width: 75%;
-		margin-bottom: 7px;
 		border-radius: 5px;
-
-		-moz-box-shadow: 02px 02px 2px 0px #656565;
-		-webkit-box-shadow: 02px 02px 2px 0px #656565;
-		-o-box-shadow: 02px 02px 2px 0px #656565;
-		box-shadow: 02px 02px 2px 0px #656565;
+		-moz-box-shadow: 2px 2px 2px 0px #656565;
+		-webkit-box-shadow: 2px 2px 2px 0px #656565;
+		-o-box-shadow: 2px 2px 2px 0px #656565;
+		box-shadow: 2px 2px 2px 0px #656565;
 	}
 
-
-	.contenu_principal{
-		border: 1px solid #656565;
-		-moz-box-shadow: 05px 05px 5px 0px #656565;
-		-webkit-box-shadow: 05px 05px 5px 0px #656565;
-		-o-box-shadow: 05px 05px 5px 0px #656565;
-		box-shadow: 05px 05px 5px 0px #656565;
-
-		line-height: 15px;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-
-		filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
-	}
-    
     .quality_control {
-    display : none;
+        display : none;
     }
 
 }

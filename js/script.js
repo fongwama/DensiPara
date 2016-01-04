@@ -54,7 +54,6 @@ function check_input_data() {
     //
     // nombre de parasites
     if ( !$.isNumeric( $("#input_nb_parasite").val() ) ){
-            alert( $("#input_nb_parasite").val() );
         // clean data and focus on input
         $("#input_nb_parasite").val("");
         $("#input_nb_parasite").focus();
