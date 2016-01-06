@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fongwama.densitepara"
         versionCode = "10" 
-        version     = "1.0.4" >
+        version     = "1.0.5" >
     <!-- versionCode is optional and Android only -->
     
 
@@ -25,12 +25,15 @@
 
 
     <!-- no permission required -->
-    <preference name="permissions" value="none"/>
+    <preference name="permissions" value="none" />
+
+    <preference name="fullscreen" value="true" />
 
 
     <!-- splash screen -->
+    <plugin name="org.apache.cordova.splashscreen" />
     <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="1500" />
     <splash src="splash.png" />
     <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
     <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
