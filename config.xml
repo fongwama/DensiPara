@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fongwama.densitepara"
         versionCode = "10" 
-        version     = "1.0.5" >
+        version     = "1.0.6" >
     <!-- versionCode is optional and Android only -->
     
 
@@ -34,11 +34,11 @@
     <plugin name="org.apache.cordova.splashscreen" />
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="1500" />
-    <splash src="splash.png" />
     <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
     <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
     <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
     <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <splash src="splash.png" />
 
 </widget>
 
