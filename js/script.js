@@ -98,10 +98,16 @@ function check_input_data() {
 
 }
 
+// function to prefix zero if number < 10
+function prefix_zero(number) {
+    if(number<10){
+        number = "0"+number;
+    }
+    return number;
+}
 
 // function to build date and time
-function print_date_time(id)
-{
+function print_date_time(id) {
     // create new Date instance
     date = new Date;
     // get year
@@ -118,12 +124,8 @@ function print_date_time(id)
     }
     // get minutes
     m = date.getMinutes();
-    // add '0' if minutes < 10
-    if(m<10) {
-        m = "0"+m;
-    }
     // format ouput
-    output= day+'/'+month+'/'+year+' '+h+':'+m;
+    output= prefix_zero(day)+'/'+prefix_zero(month)+'/'+year+' '+prefix_zero(h)+':'+prefix_zero(m);
     // print date and time
     $(id).val(output);
     return true; 
