@@ -98,8 +98,8 @@ form input[type="button"]{
 	display: inline;
 	border: none;
 	padding: 0;
-	margin-top: 20px;
-    margin-bottom: 20px;
+	margin-top: 15px;
+    margin-bottom: 15px;
     margin-right: 30px;
 	cursor: pointer;
 	background-color: #faebd7;
@@ -119,9 +119,6 @@ a{
 	text-decoration: none;
 }
 
-a:link, a:visited{
-	color:#CF5C3F;
-}
 
 a:hover, a:active{
 	background-color:#CF5C3F;
@@ -136,6 +133,15 @@ footer{
 }
 
 
+footer a:link, a:visited{
+	color:#797979;
+}
+
+
+footer a:hover, a:active{
+	background-color:#FFFFFF;
+	color:#CAC6C6;
+}
 /*****************************************************************************
  * for mobile app
 *******************************************************************************/
