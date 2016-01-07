@@ -3,14 +3,14 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fongwama.densitepara"
         versionCode = "10" 
-        version     = "1.0.7" >
+        version     = "1.0.8" >
     <!-- versionCode is optional and Android only -->
     
 
     <name>DensitePara</name>
 
     <description>
-        Calcul de la densite parasitaire. 
+        Calcul de la densite parasitaire pour le diagnostique du paludisme.
     </description>
 
     <author href="http://www.fongwama.com" email="support@fongwama.com">
@@ -31,13 +31,14 @@
 
 
     <!-- splash screen -->
+    <gap:plugin name="org.apache.cordova.splashscreen" />
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="1500" />
-    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <splash src="splash.png" />
+    <gap:splash platform="android" gap:qualifier="port-ldpi"  src="res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-mdpi"  src="res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-hdpi"  src="res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <gap:splash src="splash.png" />
 
 </widget>
 
