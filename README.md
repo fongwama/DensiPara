@@ -1,10 +1,11 @@
 # DensitePara
 
-Application pour calculer la densité parasitaire dans le cadre du diagnostic du paludisme.
+Application pour de calcul de la densité parasitaire. 
 
-Paramètres d'entrée :
+La densité parasitaire est une mesure de la quantité de parasites dans le sang. C’est un paramètre très important pour déterminer la force de l’infection plasmodiale. Elle est utilisée par les médecins pour affiner leur diagnostic et adapter leur traitement. Cette application est à destination des techniciens de laboratoire qui diagnostiquent le paludisme par microscopie (goutte épaisse et frottis sanguin).
 
-- nombre de parasites comptés par microscopie
-- nombre de globules blancs comptés par microscopie
-- nombre moyen de globules blancs par µL de sang (fixé à 8000 par défaut)
+Version web : [fongwama.github.io/DensitePara](http://fongwama.github.io/DensitePara/)
 
+Dernière version du code source : [zip](https://github.com/fongwama/DensitePara/archive/master.zip)
+
+L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton "Calculer" permet d'effectuer le calcul. Le bouton "Réinitialiser" efface tous les champs.
