@@ -3,14 +3,14 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fongwama.densitepara"
         versionCode = "10" 
-        version     = "1.0.8" >
+        version     = "1.1.0" >
     <!-- versionCode is optional and Android only -->
     
 
     <name>DensitePara</name>
 
     <description>
-        Calcul de la densite parasitaire pour le diagnostique du paludisme.
+        Calcul de la densite parasitaire pour le diagnostic du paludisme.
     </description>
 
     <author href="http://www.fongwama.com" email="support@fongwama.com">
