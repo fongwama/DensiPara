@@ -90,7 +90,7 @@ input{
 
 .info{
 	color: red;
-	display: block;
+	display: none;
 	font-style: italic;
 }
 
