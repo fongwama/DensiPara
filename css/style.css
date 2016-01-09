@@ -94,7 +94,7 @@ input{
 	font-style: italic;
 }
 
-form input[type="button"]{
+button {
 	display: inline;
 	border: none;
 	padding: 0;
@@ -183,7 +183,7 @@ footer a:hover, a:active{
 		text-align: center;
 	}
     
-	form input[type="button"]{
+	button{
 		margin-top: 10px;
         margin-bottom: 7px;
         margin-right: 0px;
@@ -215,7 +215,7 @@ footer a:hover, a:active{
         display: none;
     }
     
-    form input[type="button"]{
+    buttton{
         display: none;
     }
 }
