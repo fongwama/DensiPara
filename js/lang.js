@@ -54,3 +54,12 @@ $( "#lang-fr" ).click(function() {
 translate('fr');
 });
 
+// detect local language used by navigator 
+// english by default
+var user_lang = (navigator.language || navigator.userLanguage).split('-')[0];
+if( user_lang == "fr" ) {
+    translate('fr');
+} else {
+    translate('en');
+}
+
