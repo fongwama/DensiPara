@@ -36,16 +36,16 @@ var translation = {
         "info_nb_wbc_blood"       : "Please enter the number of white blood cells / µL of blood.", 
         "button_compute"          : "Compute",
         "button_reset"            : "Reset",
-        "label_parasitemia"       : "Parasitemia",
+        "label_parasitemia"       : "Parasite density",
         "label_parasitemia_unit"  : "parasites / µL of blood",
         "label_ref_id"            : "Reference id",
         "label_date_time"         : "Date and time", 
-        "about_description"       : "is an app to compute parasitemia for malaria diagnosis.",
+        "about_description"       : "is an app to compute parasite density for malaria diagnosis.",
         "about_fongwama"          : "Developed by Fongwama, the congolese plateforme for open source development",
         "about_sponsors"          : "Fongwama is supported by our sponsors",
         "about_license"           : "This application is an open source software under the license",
         "help_description"        : "Parasitemia is a measurement of the quantity of parasites in blood. It's an important factor to determine the strength of the plasmodial infection. It helps physicians to diagnose malaria and to adapt drug prescription. This app is a tool for laboratory technicians who diagnose malaria by microscopy (thick or thin blood smear).",
-        "help_user"               : "The user provides as input parameters the number of parasites and the number of white blood cells measured by miscrocopy. A default value is used for the number of white blood cells per µL of blood. This value can be modified. The 'Compute' button perform the calculation of parasitemia. The 'Reset' button cleans all fields."
+        "help_user"               : "The user provides as input parameters the number of parasites and the number of white blood cells measured by miscrocopy. A default value is used for the number of white blood cells per µL of blood. This value can be modified. The 'Compute' button perform the calculation of parasite density. The 'Reset' button cleans all fields."
     }
 }
 
