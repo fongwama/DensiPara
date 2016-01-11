@@ -38,7 +38,7 @@ nav{
     padding-left: 25px;
 }
 
-nav a:link,  nav a:visited{
+nav a:link,  nav a:visited, nav #lang{
 	color: #FFFFFF;
 	display: inline-block;
 	padding: 11px 25px;
@@ -54,6 +54,11 @@ nav a{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
+nav #lang{
+    float:right; 
+}
+
 
 section {
     padding: 10px;
