@@ -12,7 +12,11 @@ var translation = {
         "label_parasitemia"       : "Densité parasitaire",
         "label_parasitemia_unit"  : "parasites / µL de sang",
         "label_ref_id"            : "Numéro de référence",
-        "label_date_time"         : "Date et heure" 
+        "label_date_time"         : "Date et heure",
+        "about_description"       : "application de calcul de la densité parasitaire pour le diagnostic du paludisme",
+        "about_fongwama"          : "Développée par Fongwama, la plateforme congolaise de développement libre",
+        "about_sponsors"          : "Fongwama est soutenu par nos partenaires ",
+        "about_license"           : "Cette application est un logiciel libre diffusé sous la licence "
     },
     "en" : {
         "label_nb_parasite"       : "Number of parasites",
@@ -27,7 +31,11 @@ var translation = {
         "label_parasitemia"       : "Parasitemia",
         "label_parasitemia_unit"  : "parasites / µL of blood",
         "label_ref_id"            : "Reference id",
-        "label_date_time"         : "Date and time" 
+        "label_date_time"         : "Date and time", 
+        "about_description"       : "application to compute parasitemia for malaria diagnosis",
+        "about_fongwama"          : "Developed by Fongwama, the congolese plateforme for open source development",
+        "about_sponsors"          : "Fongwama is supported by our sponsors",
+        "about_license"           : "This application is an open source software under the license"
     }
 }
 
