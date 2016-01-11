@@ -14,17 +14,28 @@
     <header>
         <h1>DensitePara</h1>
         <nav>
-            <a href="index.html"> Accueil </a>
-            <a href="apropos.html"> A propos </a>
+            <a id="menu_home" href="index.html">Accueil</a>
+            <a id="menu_about" href="apropos.html">À propos</a>
+            <div id="lang">
+            <span id="lang-en">en</span> / <span id="lang-fr">fr</span>
+            </div>
         </nav>
     </header>
 
     <!-- content -->
     <section >
         <article>
-          <p>DensitePara est une application de calcul de la densité parasitaire. La densité parasitaire est une mesure de la quantité de parasites dans le sang. C’est un paramètre très important pour déterminer la force de l’infection plasmodiale. Elle est utilisée par les médecins pour affiner leur diagnostic et adapter leur traitement. Cette application est à destination des techniciens de laboratoire qui diagnostiquent le paludisme par microscopie (goutte épaisse et frottis sanguin).</p>
+            <p>
+                DensitePara <span id="about_description">est une application de calcul de la densité parasitaire.<span> 
+            </p>
 
-          <p>L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton "Calculer" permet d'effectuer le calcul. Le bouton "Réinitialiser" efface tous les champs.</p>
+            <p>
+                <span id ="help_description">La densité parasitaire est une mesure de la quantité de parasites dans le sang. C’est un paramètre très important pour déterminer la force de l’infection plasmodiale. Elle est utilisée par les médecins pour affiner leur diagnostic et adapter leur traitement. Cette application est à destination des techniciens de laboratoire qui diagnostiquent le paludisme par microscopie (goutte épaisse et frottis sanguin).</span>
+            </p>
+
+            <p>
+                <span id="help_user">L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton 'Calculer' permet d'effectuer le calcul. Le bouton 'Réinitialiser' efface tous les champs.<span>
+            </p>
         </article>
     </section>
 
@@ -34,7 +45,9 @@
     </footer>
     
     </div>
-
+    <!-- load javascripts -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/lang.js"></script>
 </body>
 </html>
 
