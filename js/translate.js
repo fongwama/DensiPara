@@ -17,8 +17,9 @@ var translation = {
         "label_ref_id"            : "Référence de l'échantillon",
         "label_date_time"         : "Date et heure",
         "about_description"       : "est une application de calcul de la densité parasitaire pour le diagnostic du paludisme.",
-        "about_fongwama"          : "Développée par Fongwama, la plateforme congolaise de développement libre",
-        "about_sponsors"          : "Fongwama est soutenu par nos partenaires ",
+        "about_fcrm"              : "Coordination scientifique et technique : Fondation Congolaise pour la Recherche Médicale (FCRM).",
+        "about_fongwama"          : "Développement : FCRM et Fongwama, la plateforme congolaise de développement libre.",
+        "about_sponsors"          : "Ce projet est soutenu par nos partenaires : ",
         "about_license"           : "Cette application est un logiciel libre diffusé sous la licence ",
         "help_description"        : "La densité parasitaire est une estimation du nombre de parasites par microlitre de sang chez un individu infecté. C’est un paramètre important pour déterminer la force de l’infection plasmodiale. Elle est utilisée par les médecins pour affiner leur diagnostic et adapter leur traitement. Cette application est à destination des techniciens de laboratoire qui diagnostiquent le paludisme par microscopie (goutte épaisse et frottis sanguin).",
         "help_user"               : "L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton 'Calculer' permet d'effectuer le calcul. Le bouton 'Réinitialiser' efface tous les champs."
@@ -40,11 +41,12 @@ var translation = {
         "label_parasitemia_unit"  : "parasites / µL of blood",
         "label_ref_id"            : "Sample id",
         "label_date_time"         : "Date and time", 
-        "about_description"       : "is an app to compute parasite density for malaria diagnosis.",
-        "about_fongwama"          : "Developed by Fongwama, the congolese plateforme for open source development",
-        "about_sponsors"          : "Fongwama is supported by our sponsors",
+        "about_description"       : "is an application to compute parasite density for malaria diagnosis.",
+        "about_fcrm"              : "Scientific et technical management: Fondation Congolaise pour la Recherche Médicale (FCRM).",
+        "about_fongwama"          : "Development: FCRM and Fongwama, the congolese plateforme for open source development",
+        "about_sponsors"          : "This project is supported by our sponsors:",
         "about_license"           : "This application is an open source software under the license",
-        "help_description"        : "Parasite density is an estimation of the number of parasites per microliter of blood in an infected individual. It's an important factor to determine the strength of the plasmodial infection. It helps physicians to diagnose malaria and to adapt the treatment. This app is a tool for laboratory technicians who diagnose malaria by microscopy (thick or thin blood smear).",
+        "help_description"        : "Parasite density is an estimation of the number of parasites per microliter of blood in an infected individual. It's an important factor to determine the strength of the plasmodial infection. It helps physicians to diagnose malaria and to adapt the treatment. This application is a tool for laboratory technicians who diagnose malaria by microscopy (thick or thin blood smear).",
         "help_user"               : "The user provides as input parameters the number of parasites and the number of white blood cells measured by miscrocopy. A default value is used for the number of white blood cells per µL of blood. This value can be modified. The button 'Compute' is used to perform the calculation of parasite density. The button 'Reset' is used to clean all the inputs and the obtained parasite density."
     }
 }
