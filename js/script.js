@@ -16,6 +16,7 @@ $(document).ready(function(){
     });
     $("#input_nb_wbc").keyup(function(){
         $("#info_nb_wbc").css("display","none;").fadeOut(500);
+        $("#info_nb_wbc_null").css("display","none;").fadeOut(500);
     });
     $("#input_nb_wbc_blood").keyup(function(){
         $("#info_nb_wbc_blood").css("display","none;").fadeOut(500);
@@ -57,8 +58,8 @@ function check_input_data() {
         // clean data and focus on input
         $("#input_nb_parasite").val("");
         $("#input_nb_parasite").focus();
-        // print error message
-        $("#info_nb_parasite").html("Veuillez saisir le nombre de parasites.");
+        // display error message
+        //$("#info_nb_parasite").html("Veuillez saisir le nombre de parasites.");
         $("#info_nb_parasite").css("display","block");
         return false;
     }
@@ -68,8 +69,8 @@ function check_input_data() {
         // clean data and focus on input
         $("#input_nb_wbc").val("");
         $("#input_nb_wbc").focus();
-        // print error message
-        $("#info_nb_wbc").html("Veuillez saisir le nombre de globules blancs.");
+        // display error message
+        //$("#info_nb_wbc").html("Veuillez saisir le nombre de globules blancs.");
         $("#info_nb_wbc").css("display","block");
         return false;
         // nombre de globules blancs
@@ -78,9 +79,9 @@ function check_input_data() {
         // clean data and focus on input
         $("#input_nb_wbc").val("");
         $("#input_nb_wbc").focus();
-        // print error message
-        $("#info_nb_wbc").html("Le nombre de globules blancs ne doit pas être nul.");
-        $("#info_nb_wbc").css("display","block");
+        // display error message
+        //$("#info_nb_wbc").html("Le nombre de globules blancs ne doit pas être nul.");
+        $("#info_nb_wbc_null").css("display","block");
         return false
     }
     // nombre de globules blancs / µL de sang
@@ -88,8 +89,8 @@ function check_input_data() {
         // clean data and focus on input
         $("#input_nb_wbc_blood").val("");
         $("#input_nb_wbc_blood").focus();
-        // print error message
-        $("#info_nb_wbc_blood").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
+        // display error message
+        //$("#info_nb_wbc_blood").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
         $("#info_nb_wbc_blood").css("display","block");
         return false;
     }
@@ -130,3 +131,5 @@ function print_date_time(id) {
     $(id).val(output);
     return true; 
 }
+
+

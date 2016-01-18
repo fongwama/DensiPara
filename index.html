@@ -12,10 +12,13 @@
     
     <!-- header -->
     <header class="entete_principal">
-        <h1>DensitePara</h1>
+        <h1>DensiPara</h1>
         <nav>
-            <a href="guide.html">Guide</a>
-            <a href="apropos.html">A propos</a>
+            <a id="menu_help" href="help.html">Guide</a>
+            <a id="menu_about" href="about.html">A propos</a>
+            <div id="lang">
+            <span id="lang-en">en</span> / <span id="lang-fr">fr</span>
+            </div>
         </nav>
     </header>
 
@@ -32,6 +35,7 @@
                     <label id="label_nb_wbc">Nombre de globules blancs</label>
                     <input id="input_nb_wbc" type="text">
                     <span id="info_nb_wbc" class="info"></span>
+                    <span id="info_nb_wbc_null" class="info"></span>
                 </div>
                 <div>
                     <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
@@ -39,13 +43,13 @@
                     <span id="info_nb_wbc_blood" class="info"></span>
                 </div>
                 <div class="actions">
-                    <input id="button_compute" type="button" value="Calculer" />
-                    <input id="button_reset" type="button" value="Réinitialiser" />
+                    <button id="button_compute" type="button">Calculer</button>
+                    <button id="button_reset" type="button">Réinitialiser</button>
                 </div>
                 <div>
                     <label id="label_parasitemia" class="parasitemia">Densité parasitaire</label>
                     <input id="input_parasitemia" class="parasitemia" type="text" readonly="true">
-                    <label id="label_parasitemia2" class="parasitemia">parasites / µL de sang</label>
+                    <label id="label_parasitemia_unit" class="parasitemia">parasites / µL de sang</label>
                 </div>
                 <div class="quality_control">
                     <label id="label_ref_id">Numéro de référence</label>
@@ -61,12 +65,13 @@
 
     <!-- footer -->
     <footer>
-        <a href="http://www.fongwama.com">Fongwama</a> 2016
+        <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> 2016
     </footer>
     </div>
 
     <!-- load javascripts -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/translate.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

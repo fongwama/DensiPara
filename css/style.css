@@ -38,7 +38,7 @@ nav{
     padding-left: 25px;
 }
 
-nav a:link,  nav a:visited{
+nav a:link,  nav a:visited, nav #lang{
 	color: #FFFFFF;
 	display: inline-block;
 	padding: 11px 25px;
@@ -54,6 +54,11 @@ nav a{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
+nav #lang{
+    float:right; 
+}
+
 
 section {
     padding: 10px;
@@ -90,11 +95,11 @@ input{
 
 .info{
 	color: red;
-	display: block;
+	display: none;
 	font-style: italic;
 }
 
-form input[type="button"]{
+button {
 	display: inline;
 	border: none;
 	padding: 0;
@@ -183,7 +188,7 @@ footer a:hover, a:active{
 		text-align: center;
 	}
     
-	form input[type="button"]{
+	button{
 		margin-top: 10px;
         margin-bottom: 7px;
         margin-right: 0px;
@@ -215,7 +220,7 @@ footer a:hover, a:active{
         display: none;
     }
     
-    form input[type="button"]{
+    button{
         display: none;
     }
 }

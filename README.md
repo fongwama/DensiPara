@@ -1,4 +1,4 @@
-# DensitePara
+# DensiPara
 
 Application de calcul de la densité parasitaire pour le diagnostic du paludisme. 
 
@@ -6,9 +6,9 @@ La densité parasitaire est une mesure de la quantité de parasites dans le sang
 
 ## Démo et code source
 
-Tester la Version web : [fongwama.github.io/DensitePara](http://fongwama.github.io/DensitePara/)
+Tester la version web : [fongwama.github.io/DensiPara](http://fongwama.github.io/DensiPara/)
 
-Télécharger la dernière version du code source : [zip](https://github.com/fongwama/DensitePara/archive/master.zip)
+Télécharger la dernière version du code source : [zip](https://github.com/fongwama/DensiPara/archive/master.zip)
 
 ## Guide d'utilisation
 
