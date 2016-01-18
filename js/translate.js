@@ -33,21 +33,21 @@ var translation = {
         "label_nb_wbc"            : "Number of white blood cells",
         "info_nb_wbc"             : "Please enter the number of white blood cells.",
         "info_nb_wbc_null"        : "Number of white blood cells cannot be null.", 
-        "label_nb_wbc_blood"      : "Nombre of white blood cells / µL of blood",
+        "label_nb_wbc_blood"      : "Number of white blood cells / µL of blood",
         "info_nb_wbc_blood"       : "Please enter the number of white blood cells / µL of blood.", 
-        "button_compute"          : "Compute",
+        "button_compute"          : "Calculate",
         "button_reset"            : "Reset",
         "label_parasitemia"       : "Parasite density",
         "label_parasitemia_unit"  : "parasites / µL of blood",
         "label_ref_id"            : "Sample id",
         "label_date_time"         : "Date and time", 
-        "about_description"       : "is an application to compute parasite density for malaria diagnosis.",
+        "about_description"       : "is an application to calculate parasite density for malaria diagnosis.",
         "about_fcrm"              : "Scientific et technical management: Fondation Congolaise pour la Recherche Médicale (FCRM).",
         "about_fongwama"          : "Development: FCRM and Fongwama, the congolese plateforme for open source development",
         "about_sponsors"          : "This project is supported by our sponsors:",
         "about_license"           : "This application is an open source software under the license",
         "help_description"        : "Parasite density is an estimation of the number of parasites per microliter of blood in an infected individual. It's an important factor to determine the strength of the plasmodial infection. It helps physicians to diagnose malaria and to adapt the treatment. This application is a tool for laboratory technicians who diagnose malaria by microscopy (thick or thin blood smear).",
-        "help_user"               : "The user provides as input parameters the number of parasites and the number of white blood cells measured by miscrocopy. A default value is used for the number of white blood cells per µL of blood. This value can be modified. The button 'Compute' is used to perform the calculation of parasite density. The button 'Reset' is used to clean all the inputs and the obtained parasite density."
+        "help_user"               : "The user provides as input parameters the number of parasites and the number of white blood cells measured by miscrocopy. A default value is used for the number of white blood cells per µL of blood. This value can be modified. The button 'Calculate' is used to perform the calculation of parasite density. The button 'Reset' is used to clean all the inputs and the obtained parasite density."
     }
 }
 
