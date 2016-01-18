@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.fongwama.densipara"
+        id          = "com.fcrm.densipara"
         versionCode = "10" 
-        version     = "1.1.0" >
+        version     = "1.2.0" >
     <!-- versionCode is optional and Android only -->
     
 
@@ -13,8 +13,8 @@
         Calcul de la densite parasitaire pour le diagnostic du paludisme.
     </description>
 
-    <author href="http://www.fongwama.com" email="support@fongwama.com">
-        Fongwama 
+    <author href="http://www.fcrm-congo.com" email="info@fcrm-congo.com">
+        FCRM et Fongwama 
     </author>
 
     <!-- build only for android -->
