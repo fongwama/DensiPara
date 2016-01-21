@@ -42,7 +42,7 @@ var translation = {
         "label_ref_id"            : "Sample id",
         "label_date_time"         : "Date and time", 
         "about_description"       : "is an application to calculate parasite density for malaria diagnosis.",
-        "about_fcrm"              : "Scientific et technical management: Fondation Congolaise pour la Recherche Médicale (FCRM).",
+        "about_fcrm"              : "Scientific and technical management: Fondation Congolaise pour la Recherche Médicale (FCRM).",
         "about_fongwama"          : "Development: FCRM and Fongwama, the congolese plateforme for open source development",
         "about_sponsors"          : "This project is supported by our sponsors:",
         "about_license"           : "This application is an open source software under the license",
