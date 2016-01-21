@@ -1,5 +1,5 @@
 /**
- * Created by Aristide Ciriaque on 12/11/2015.
+ * Created by Aristide Ndielé on 12/11/2015.
  */
 $(document).ready(function(){
     // default value for the number of white blood cell / microlitre of blood
@@ -34,14 +34,14 @@ $(document).ready(function(){
     });
 
 
-    // Appel de la fonction d'affichage de l'heure
+    // refresh date and time
     print_date_time("#input_date_time");
 });
 
 
-// Méthode permettant de calculer la densité parasitaire
+// calculate parasite density
 function compute_parasitemia() {
-    if(check_input_data()) { // Si l'utilisateur à tout renseigner, alors
+    if(verify_input_data()) { // check inputs first
         var resultat = $("#input_nb_parasite").val() * $("#input_nb_wbc_blood").val() / $("#input_nb_wbc").val();
         $("#input_parasitemia").val(Math.round(resultat));
     }
@@ -50,54 +50,51 @@ function compute_parasitemia() {
 }
 
 
-function check_input_data() {
-    // check in input fields are nummbers
-    //
-    // nombre de parasites
+function verify_input_data() {
+    // verify input fields
+
+    // number of parasites
     if ( !$.isNumeric( $("#input_nb_parasite").val() ) ){
         // clean data and focus on input
         $("#input_nb_parasite").val("");
         $("#input_nb_parasite").focus();
         // display error message
-        //$("#info_nb_parasite").html("Veuillez saisir le nombre de parasites.");
         $("#info_nb_parasite").css("display","block");
         return false;
     }
-    // nombre de globules blancs
-    // doit impérativement être différent de 0
+
+    // number of white blood cells
     if ( !$.isNumeric( $("#input_nb_wbc").val() ) ){
         // clean data and focus on input
         $("#input_nb_wbc").val("");
         $("#input_nb_wbc").focus();
         // display error message
-        //$("#info_nb_wbc").html("Veuillez saisir le nombre de globules blancs.");
         $("#info_nb_wbc").css("display","block");
         return false;
-        // nombre de globules blancs
-        // doit impérativement être différent de 0
+    // must be not null
     }else if ( $("#input_nb_wbc").val() == 0 ) {
         // clean data and focus on input
         $("#input_nb_wbc").val("");
         $("#input_nb_wbc").focus();
         // display error message
-        //$("#info_nb_wbc").html("Le nombre de globules blancs ne doit pas être nul.");
         $("#info_nb_wbc_null").css("display","block");
         return false
     }
-    // nombre de globules blancs / µL de sang
+
+    // number of white blood cells / µL of blood
     if ( !$.isNumeric( $("#input_nb_wbc_blood").val() ) ){
         // clean data and focus on input
         $("#input_nb_wbc_blood").val("");
         $("#input_nb_wbc_blood").focus();
         // display error message
-        //$("#info_nb_wbc_blood").html("Veuiller saisir le nombre de globules blancs / µL de sang.");
         $("#info_nb_wbc_blood").css("display","block");
         return false;
     }
-    // si tout c'est bien passé
-    return true;
 
+    // if everything is fine
+    return true;
 }
+
 
 // function to prefix zero if number < 10
 function prefix_zero(number) {
@@ -106,6 +103,7 @@ function prefix_zero(number) {
     }
     return number;
 }
+
 
 // function to build date and time
 function print_date_time(id) {
@@ -119,10 +117,6 @@ function print_date_time(id) {
     day = date.getDate();
     // get hours
     h = date.getHours();
-    // add '0' if hours < 10
-    if(h<10){
-        h = "0"+h;
-    }
     // get minutes
     m = date.getMinutes();
     // format ouput

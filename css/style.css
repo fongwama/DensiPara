@@ -11,7 +11,7 @@ body{
 	clear: both;
 }
 
-.content_full{
+#content_full{
     border: 1px solid #656565;
 	-moz-box-shadow: 5px 5px 5px 0px #656565;
 	-webkit-box-shadow: 5px 5px 5px 0px #656565;
