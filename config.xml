@@ -27,7 +27,7 @@
     <!-- no permission required -->
     <preference name="permissions" value="none" />
 
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
 
 
     <!-- splash screen -->
