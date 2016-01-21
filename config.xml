@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fcrm.densipara"
-        versionCode = "14" 
-        version     = "1.4" >
+        versionCode = "15" 
+        version     = "1.5" >
     <!-- versionCode is optional and Android only. It must be an integer -->
     
 
@@ -39,6 +39,10 @@
     <gap:splash platform="android" gap:qualifier="port-hdpi"  src="res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     <gap:splash src="splash.png" />
+
+    <!-- access to external links -->
+    <preference name="stay-in-webview" value="false"/>
+    <access origin="*" browserOnly="true"/>
 
 </widget>
 
