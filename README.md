@@ -12,9 +12,9 @@ Télécharger la dernière version du code source : [zip](https://github.com/fon
 
 ## Version Android
 
-DensiPara est disponible sur le Google Play Store : [ ![Google Play Badge](local/google-play-badge.png) ](https://play.google.com/store/apps/details?id=com.fcrm.densipara)
+DensiPara est disponible sur Google Play Store : [ ![Google Play Badge](local/google-play-badge.png) ](https://play.google.com/store/apps/details?id=com.fcrm.densipara)
 
-Le fichier apk est généré par l'application [Build](https://build.phonegap.com/) de PhoneGap et peut être téléchargé [ici](https://build.phonegap.com/apps/1868589/share).
+Le fichier apk est généré par l'outil [Build](https://build.phonegap.com/) de PhoneGap et peut être téléchargé [ici](https://build.phonegap.com/apps/1868589/share).
 
 
 ## Guide d'utilisation
