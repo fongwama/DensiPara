@@ -2,9 +2,9 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fcrm.densipara"
-        versionCode = "1" 
-        version     = "1.4.0" >
-    <!-- versionCode is optional and Android only -->
+        versionCode = "14" 
+        version     = "1.4" >
+    <!-- versionCode is optional and Android only. It must be an integer -->
     
 
     <name>DensiPara</name>
