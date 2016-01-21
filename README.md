@@ -25,6 +25,6 @@ Les champs "Numéro de référence" et "Date et heure" sont utilisés dans le ca
 
 ## Licence
 
-Cette application est une logiciel libre diffusé sous la license [GNU General Public License](LICENSE) (GPL).
+Cette application est un logiciel libre diffusé sous la licence [GNU General Public License](LICENSE) (GPL).
 
 
