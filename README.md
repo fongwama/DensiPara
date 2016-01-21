@@ -19,9 +19,9 @@ Le fichier apk est généré par l'outil [Build](https://build.phonegap.com/) de
 
 ## Guide d'utilisation
 
-L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton "Calculer" permet d'effectuer le calcul. Le bouton "Réinitialiser" efface tous les champs.
+L’utilisateur fournit comme paramètres d'entrée le nombre de parasites et le nombre de globules blancs comptés par microscopie. Une valeur par défaut est utilisée pour le nombre de globules blancs par µL de sang. Cette valeur peut être modifiée. Le bouton *Calculer* permet d'effectuer le calcul. Le bouton *Réinitialiser* efface tous les champs.
 
-Les champs "Numéro de référence" et "Date et heure" sont utilisés dans le cadre d'un contrôle de la qualité. L'impression de la page permet d'archiver la mesure effectuée.
+Les champs *Référence de l'échantillon* et *Date et heure* sont utilisés dans le cadre d'un contrôle de la qualité. L'impression de la page permet d'archiver la mesure effectuée.
 
 ## Licence
 
