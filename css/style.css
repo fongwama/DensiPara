@@ -4,7 +4,6 @@ html {
 
 body{
 	background-color: #ffffff;
-	background-position: 0% 0;
 	font-size: 110%;
 	font-family: Arial, sans-serif;
 	line-height: 20px;
@@ -15,9 +14,7 @@ body{
 	border: 1px solid #656565;
     min-height: 100%;
     position: relative;
-    clear: both;
 }
-
 
 header{
 	background-color: #999999;
@@ -133,7 +130,6 @@ a:hover, a:active{
 footer{
     position: absolute;
     bottom: 0;
-    clear: both;
     width: 95%;
 	padding-top: 10px;
 	padding-bottom: 5px;
