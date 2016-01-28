@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fcrm.densipara"
-        versionCode = "16" 
-        version     = "1.6" >
+        versionCode = "17" 
+        version     = "1.7" >
     <!-- versionCode is optional and Android only. It must be an integer -->
     
 
