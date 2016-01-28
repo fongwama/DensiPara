@@ -1,6 +1,9 @@
+html {
+    height: 100%;
+}
+
 body{
 	background-color: #ffffff;
-	background-position: 0% 0;
 	font-size: 110%;
 	font-family: Arial, sans-serif;
 	line-height: 20px;
@@ -8,16 +11,9 @@ body{
 	overflow:auto;
 	margin: 0 auto;
 	width:50%;
-	clear: both;
-}
-
-#content_full{
-    border: 1px solid #656565;
-	-moz-box-shadow: 5px 5px 5px 0px #656565;
-	-webkit-box-shadow: 5px 5px 5px 0px #656565;
-	-o-box-shadow: 5px 5px 5px 0px #656565;
-	box-shadow: 5px 5px 5px 0px #656565;
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+	border: 1px solid #656565;
+    min-height: 100%;
+    position: relative;
 }
 
 header{
@@ -61,7 +57,8 @@ nav #lang{
 
 
 section {
-    padding: 10px;
+    padding: 0px 10px;
+    margin-bottom: 35px;
 }
 
 .img{
@@ -74,7 +71,6 @@ form{
 	max-width: 500px;
 	margin: 20px auto 20px auto;
 	padding: 10px;
-	box-shadow: #666666;
 	border-radius: 5px;
 }
 
@@ -130,8 +126,14 @@ a:hover, a:active{
 	color:#ffffff;
 }
 
+
 footer{
-	margin: 6px;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+	padding-top: 10px;
+	padding-bottom: 5px;
+    height: 20px;
 	text-align: right;
 	color: #797979;
     font-style: italic;
@@ -172,7 +174,7 @@ footer a:hover, a:active{
     }
     
 	form{
-		margin: 0px;
+	    margin: 10px auto;
 		padding: 1%;
 	}
 
@@ -212,8 +214,13 @@ footer a:hover, a:active{
 *******************************************************************************/
 @media only print {
 
+    html{
+        height: 95%
+    }
+
 	body{
 		width: 100%;
+        border: 0px;
 	}
     
     nav{
