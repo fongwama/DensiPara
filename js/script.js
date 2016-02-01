@@ -29,6 +29,8 @@ $(document).ready(function(){
         $("#input_nb_wbc").val("");
         $("#input_parasitemia").val("");
         $("#input_ref_id").val("");
+        $("#input_tech_id").val("");
+        $("#select_species").val("Unknown");
         // put focus on the first input field
         $("#input_nb_parasite").focus();
     });
