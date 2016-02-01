@@ -89,6 +89,16 @@ input{
 	font-size: 1em;
 }
 
+select{
+	width: 85%;
+	height: 35px;
+	font-size: 1em;
+	font-style: italic;
+	color: #797979;
+    background-color: #FFFFFF;
+    padding: 1px 0px;
+}
+
 .info{
 	color: red;
 	display: none;
@@ -183,6 +193,10 @@ footer a:hover, a:active{
     }
 
 	input{
+		width: 97%;
+	}
+
+	select{
 		width: 97%;
 	}
 
