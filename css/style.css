@@ -53,6 +53,11 @@ nav a{
 
 nav #lang{
     float:right; 
+    cursor: hand;
+    cursor: pointer;
+}
+nav #lang span:hover{
+    background-color: #cf5c3f;
 }
 
 
