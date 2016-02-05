@@ -57,6 +57,7 @@ nav #lang{
 
 
 section {
+    clear: both;
     padding: 0px 10px;
     margin-bottom: 35px;
 }
@@ -78,6 +79,8 @@ form div{
 
 fieldset {
     margin-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 label, input{
@@ -115,7 +118,7 @@ button {
 	display: inline;
 	border: none;
 	padding: 0;
-    margin-right: 30px;
+    margin: 2px 5%;
 	cursor: pointer;
 	background-color: #faebd7;
 	transition: 0.3s;
@@ -128,6 +131,10 @@ button {
 .parasitemia{
 	font-weight: bold;
 	color: black;
+}
+
+.actions {
+    text-align: center;
 }
 
 a{
@@ -203,10 +210,6 @@ footer a:hover, a:active{
 	select{
 		width: 97%;
 	}
-
-	.actions{
-		text-align: center;
-	}
     
 	button{
 		margin-top: 10px;
@@ -215,13 +218,9 @@ footer a:hover, a:active{
 		height: 40px;
 		width: 75%;
 		border-radius: 5px;
-		-moz-box-shadow: 2px 2px 2px 0px #656565;
-		-webkit-box-shadow: 2px 2px 2px 0px #656565;
-		-o-box-shadow: 2px 2px 2px 0px #656565;
-		box-shadow: 2px 2px 2px 0px #656565;
 	}
 
-    .quality_control {
+    .field_quality_control {
         display : none;
     }
 
