@@ -10,13 +10,15 @@ $(document).ready(function(){
         compute_parasitemia();
     });
 
-    // hide error message once enter input field
+    // hide error messages once enter input field
     $("#input_nb_parasite").keyup(function(){
         $("#info_nb_parasite").css("display","none;").fadeOut(500);
     });
     $("#input_nb_wbc").keyup(function(){
         $("#info_nb_wbc").css("display","none;").fadeOut(500);
         $("#info_nb_wbc_null").css("display","none;").fadeOut(500);
+        $("#info_nb_wbc_200").css("display","none;").fadeOut(500);
+        $("#info_nb_wbc_500").css("display","none;").fadeOut(500);
     });
     $("#input_nb_wbc_blood").keyup(function(){
         $("#info_nb_wbc_blood").css("display","none;").fadeOut(500);
@@ -55,6 +57,8 @@ function compute_parasitemia() {
 function verify_input_data() {
     // verify input fields
 
+    // error messages
+    
     // number of parasites
     if ( !$.isNumeric( $("#input_nb_parasite").val() ) ){
         // clean data and focus on input
@@ -80,7 +84,7 @@ function verify_input_data() {
         $("#input_nb_wbc").focus();
         // display error message
         $("#info_nb_wbc_null").css("display","block");
-        return false
+        return false;
     }
 
     // number of white blood cells / µL of blood
@@ -93,7 +97,15 @@ function verify_input_data() {
         return false;
     }
 
-    // if everything is fine
+    // warning messages
+    // number of white blood cells
+    if ( $("#input_nb_wbc").val() < 200 ) {
+        $("#info_nb_wbc_200").css("display","block");
+    } else if ( $("#input_nb_parasite").val() < 10 && $("#input_nb_wbc").val() < 500) {
+        $("#info_nb_wbc_500").css("display","block");
+    }
+    
+    // everything is fine
     return true;
 }
 

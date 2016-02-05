@@ -113,8 +113,14 @@ input[type="checkbox"] {
     margin-top: 5px;
 }
 
-.info{
+.error{
 	color: red;
+	display: none;
+	font-style: italic;
+}
+
+.warning{
+	color: green;
 	display: none;
 	font-style: italic;
 }
