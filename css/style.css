@@ -173,7 +173,7 @@ footer a:hover, a:active{
 /*****************************************************************************
  * for mobile app
 *******************************************************************************/
-@media only screen and (min-width: 320px) and (max-width:800px){
+@media only screen and (max-width:800px){
 
 	body{
 		width: 100%;
@@ -203,14 +203,10 @@ footer a:hover, a:active{
         margin: 5px;
     }
 
-	input{
+	input, select {
 		width: 97%;
 	}
 
-	select{
-		width: 97%;
-	}
-    
 	button{
 		margin-top: 10px;
         margin-bottom: 7px;
