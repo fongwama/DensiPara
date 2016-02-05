@@ -35,9 +35,37 @@ $(document).ready(function(){
         $("#input_nb_parasite").focus();
     });
 
-
     // refresh date and time
     print_date_time("#input_date_time");
+    
+    // prepare data for export 
+    $(".export").on('click', function (event) {
+        var sep_line = '\r\n';
+        var sep_field = ';';
+        var csv = format_csv("DensiPara", "FCRM & Fongwama", sep_field, sep_line);
+        // quality control data
+        csv  += format_csv($("#label_date_time").html(), $("#input_date_time").val(), sep_field, sep_line);
+        csv  += format_csv($("#label_ref_id").html(), $("#input_ref_id").val(), sep_field, sep_line);
+        csv  += format_csv($("#label_tech_id").html(), $("#input_tech_id").val(), sep_field, sep_line);
+        // parasitemia
+        csv  += format_csv($("#label_nb_parasite").html(), $("#input_nb_parasite").val(), sep_field, sep_line);
+        csv  += format_csv($("#label_nb_wbc").html(), $("#input_nb_wbc").val(), sep_field, sep_line);
+        csv  += format_csv($("#label_nb_wbc_blood").html(), $("#input_nb_wbc_blood").val(), sep_field, sep_line);
+        csv  += format_csv($("#label_parasitemia").html(), $("#input_parasitemia").val(), sep_field, sep_line);
+        // parasite species
+        $("input:checked").each(function() {
+            csv += format_csv($("#label_species").html(), $(this).val(), sep_field, sep_line);
+        });
+        //buil data uri
+        csv_data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+        // add download attribute
+        $(this).attr({
+            'download': 'export.csv',
+            'href': csv_data,
+            'target': '_blank'
+        });
+        alert( name_csv($("#input_ref_id").val()) );
+    });
 });
 
 
@@ -95,6 +123,29 @@ function verify_input_data() {
 
     // if everything is fine
     return true;
+}
+
+
+// prepare data for csv
+function format_csv(name, value, sep_field, sep_line) {
+    var line = '"' + name + '"' + sep_field;
+    if( $.isNumeric( value ) ){
+        line += value + sep_line;
+    } else {
+        line += '"' + value + '"' + sep_line;
+    }
+    return line;
+}
+
+// prepare filename for data export
+function name_csv(sample_id) {
+    var date = new Date;
+    var name = "DensiPara_";
+    name += date.getFullYear();
+    name += prefix_zero(date.getMonth() + 1);
+    name += prefix_zero(date.getDate());
+    name += "_" + sample_id.replace(/ /g, '_');
+    return name;
 }
 
 

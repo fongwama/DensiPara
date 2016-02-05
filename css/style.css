@@ -165,6 +165,13 @@ footer{
     font-style: italic;
 }
 
+a.export, a.export:visited {
+    text-decoration: none;
+    color:#000;
+    background-color:#ddd;
+    border: 1px solid #ccc;
+    padding:8px;
+}
 
 footer a:link, a:visited{
 	color:#797979;
