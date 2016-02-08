@@ -59,7 +59,7 @@ $(document).ready(function(){
             csv += format_csv($("#label_species").html(), $(this).val(), sep_field, sep_line);
         });
         //buil data uri
-        csv_data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+        csv_data = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
         // add download attribute
         $(this).attr({
             'download': name_csv($("#input_ref_id").val()),
