@@ -119,7 +119,7 @@ input[type="checkbox"] {
 	font-style: italic;
 }
 
-button {
+button  {
 	display: inline;
 	border: none;
 	padding: 0;
@@ -131,6 +131,11 @@ button {
 	width: 175px;
 	font-size: 1.1em;
 	color: #CF5C3F;
+}
+
+a.export, a.export:visited, a.export:hover {
+	text-decoration: none;
+    background-color: white;
 }
 
 .parasitemia{
@@ -165,13 +170,6 @@ footer{
     font-style: italic;
 }
 
-a.export, a.export:visited {
-    text-decoration: none;
-    color:#000;
-    background-color:#ddd;
-    border: 1px solid #ccc;
-    padding:8px;
-}
 
 footer a:link, a:visited{
 	color:#797979;

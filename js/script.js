@@ -53,18 +53,17 @@ $(document).ready(function(){
         csv  += format_csv($("#label_nb_wbc_blood").html(), $("#input_nb_wbc_blood").val(), sep_field, sep_line);
         csv  += format_csv($("#label_parasitemia").html(), $("#input_parasitemia").val(), sep_field, sep_line);
         // parasite species
-        $("input:checked").each(function() {
+        $("input:checkbox:checked").each(function() {
             csv += format_csv($("#label_species").html(), $(this).val(), sep_field, sep_line);
         });
         //buil data uri
         csv_data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
         // add download attribute
         $(this).attr({
-            'download': 'export.csv',
+            'download': name_csv($("#input_ref_id").val()),
             'href': csv_data,
             'target': '_blank'
         });
-        alert( name_csv($("#input_ref_id").val()) );
     });
 });
 
@@ -144,7 +143,8 @@ function name_csv(sample_id) {
     name += date.getFullYear();
     name += prefix_zero(date.getMonth() + 1);
     name += prefix_zero(date.getDate());
-    name += "_" + sample_id.replace(/ /g, '_');
+    name += "_" + sample_id.replace(/ /g, "_");
+    name += ".csv";
     return name;
 }
 
