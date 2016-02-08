@@ -38,7 +38,9 @@ $(document).ready(function(){
     // refresh date and time
     print_date_time("#input_date_time");
     
-    // prepare data for export 
+    // prepare data for export
+    // http://stackoverflow.com/questions/27398074/saving-a-data-from-html-form-to-text-file-with-jquery-javascript
+    // http://jsfiddle.net/terryyounghk/kpegu/ 
     $(".export").on('click', function (event) {
         var sep_line = '\r\n';
         var sep_field = ';';
