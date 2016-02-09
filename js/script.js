@@ -81,9 +81,8 @@ function compute_parasitemia() {
 }
 
 
+// verify input fields
 function verify_input_data() {
-    // verify input fields
-
     // number of parasites
     if ( !$.isNumeric( $("#input_nb_parasite").val() ) ){
         // clean data and focus on input
@@ -127,7 +126,7 @@ function verify_input_data() {
 }
 
 
-// prepare data for csv
+// prepare data for csv export
 function format_csv(name, value, sep_field, sep_line) {
     var line = '"' + name + '"' + sep_field;
     if( $.isNumeric( value ) ){
@@ -145,7 +144,7 @@ function name_csv(sample_id) {
     name += date.getFullYear();
     name += prefix_zero(date.getMonth() + 1);
     name += prefix_zero(date.getDate());
-    name += "_" + sample_id.replace(/ /g, "_");
+    name += "_" + sample_id.replace(/[ #\/;,]/g, "_");
     name += ".csv";
     return name;
 }
