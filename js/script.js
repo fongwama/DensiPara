@@ -101,7 +101,7 @@ function verify_input_data() {
     // number of white blood cells
     if ( $("#input_nb_wbc").val() < 200 ) {
         $("#info_nb_wbc_200").css("display","block");
-    } else if ( $("#input_nb_parasite").val() < 10 && $("#input_nb_wbc").val() < 500) {
+    } else if ( $("#input_nb_parasite").val() < 100 && $("#input_nb_wbc").val() < 500) {
         $("#info_nb_wbc_500").css("display","block");
     }
     
