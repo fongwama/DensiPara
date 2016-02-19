@@ -139,6 +139,11 @@ button {
 	color: #CF5C3F;
 }
 
+a.export, a.export:visited, a.export:hover {
+	text-decoration: none;
+    background-color: white;
+}
+
 .parasitemia{
 	font-weight: bold;
 	color: black;
