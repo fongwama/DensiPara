@@ -45,7 +45,7 @@ $(document).ready(function(){
     // http://jsfiddle.net/terryyounghk/kpegu/ 
     $(".export").on('click', function (event) {
         var sep_line = '\r\n';
-        var sep_field = ';';
+        var sep_field = '\t';
         var csv = format_csv("DensiPara", "FCRM & Fongwama", sep_field, sep_line);
         // quality control data
         csv  += format_csv($("#label_date_time").html(), $("#input_date_time").val(), sep_field, sep_line);
@@ -155,7 +155,7 @@ function name_csv(sample_id) {
     name += prefix_zero(date.getMonth() + 1);
     name += prefix_zero(date.getDate());
     name += "_" + sample_id.replace(/[ #\/;,]/g, "_");
-    name += ".csv";
+    name += ".tsv";
     return name;
 }
 
