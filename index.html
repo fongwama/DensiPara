@@ -29,18 +29,20 @@
                 <div>
                     <label id="label_nb_parasite">Nombre de parasites</label>
                     <input id="input_nb_parasite" type="text">
-                    <span id="info_nb_parasite" class="info"></span>
+                    <span id="info_nb_parasite" class="error"></span>
                 </div>
                 <div>
                     <label id="label_nb_wbc">Nombre de globules blancs</label>
                     <input id="input_nb_wbc" type="text">
-                    <span id="info_nb_wbc" class="info"></span>
-                    <span id="info_nb_wbc_null" class="info"></span>
+                    <span id="info_nb_wbc" class="error"></span>
+                    <span id="info_nb_wbc_null" class="error"></span>
+                    <span id="info_nb_wbc_200" class="warning"></span>
+                    <span id="info_nb_wbc_500" class="warning"></span>
                 </div>
                 <div>
                     <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
                     <input id="input_nb_wbc_blood" type="text">
-                    <span id="info_nb_wbc_blood" class="info"></span>
+                    <span id="info_nb_wbc_blood" class="error"></span>
                 </div>
                 <div class="actions">
                     <button id="button_compute" type="button">Calculer</button>
@@ -55,7 +57,7 @@
                 <fieldset class="field_thin_smear">
                     <legend id="legend_thin_smear">Analyse frottis sanguin</legend>
                         <div>
-                            <label id="label_species">Espèces des parasites</label>
+                            <label id="label_species">Espèces identifiées :</label>
                             <div class="name_species">
                             <input type="checkbox" value="Plasmodium falciparum">Plasmodium falciparum<br />
                             </div>
@@ -88,9 +90,17 @@
                     <input id="input_date_time" type="text" />
                     </div>
                 </fieldset>
+                <div class="actions"> 
+                <a href="#" class="export">
+                    <button id="button_export" type="button">Exporter les données</button>
+                </a>
+                </div>   
+
             </form>
         </article>
     </section>
+
+
 
     <!-- footer -->
     <footer>
