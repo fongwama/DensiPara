@@ -26,20 +26,20 @@
                 <fieldset id="field_thick_smear">
                 <legend id="legend_thick_smear">Analyse goutte épaisse</legend>
                 <div>
-                    <label id="label_nb_parasite">Nombre de parasites</label>
+                    <label id="label_nb_parasite" for="input_nb_parasite">Nombre de parasites</label>
                     <input id="input_nb_parasite" type="text" />
                     <span id="info_nb_parasite" class="error"></span>
                 </div>
                 <div>
-                    <label id="label_nb_wbc">Nombre de globules blancs</label>
-                    <input id="input_nb_wbc" type="text">
+                    <label id="label_nb_wbc" for="input_nb_wbc">Nombre de globules blancs</label>
+                    <input id="input_nb_wbc" type="text" />
                     <span id="info_nb_wbc" class="error"></span>
                     <span id="info_nb_wbc_null" class="error"></span>
                     <span id="info_nb_wbc_200" class="warning"></span>
                     <span id="info_nb_wbc_500" class="warning"></span>
                 </div>
                 <div>
-                    <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
+                    <label id="label_nb_wbc_blood" for="input_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
                     <input id="input_nb_wbc_blood" type="text" />
                     <span id="info_nb_wbc_blood" class="error"></span>
                 </div>
@@ -77,16 +77,16 @@
                 <fieldset class="field_quality_control">
                     <legend id="label_quality_control">Contrôle qualité</legend>
                     <div>
-                        <label id="label_ref_id">Numéro de référence</label>
+                        <label id="label_ref_id" for="input_ref_id">Numéro de référence</label>
                         <input id="input_ref_id" type="text" />
                     </div>
                     <div>
-                        <label id="label_tech_id">Nom du technicien</label>
+                        <label id="label_tech_id" for="input_tech_id">Nom du technicien</label>
                         <input id="input_tech_id" type="text" />
                     </div>
                     <div>
                         <label id="label_date_time">Date et heure</label>
-                        <input id="input_date_time" type="text" />
+                        <input id="input_date_time" type="text" readonly />
                     </div>
                 </fieldset>
                 <div class="actions"> 
