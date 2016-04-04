@@ -116,12 +116,15 @@ input[type="checkbox"] {
     height:auto;
 }
 
-
 .name_species {
 	font-style: italic;
 	color: #797979;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.species {
+    display: inline;
 }
 
 .error{
