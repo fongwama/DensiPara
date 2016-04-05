@@ -18,7 +18,7 @@ var translation = {
         "label_parasitemia"       : "Densité parasitaire",
         "label_parasitemia_unit"  : "parasites / µL de sang",
         "legend_thin_smear"       : "Analyse frottis sanguin",
-        "label_species"           : "Espèces identifiées ",
+        "label_species"           : "Espèces identifiées",
         "label_quality_control"   : "Contrôle qualité",
         "label_ref_id"            : "Référence de l'échantillon",
         "label_tech_id"           : "Nom du technicien",
