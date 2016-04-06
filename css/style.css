@@ -33,6 +33,14 @@ h1{
     font-size: 1.5em;
 }
 
+a{
+	text-decoration: none;
+}
+
+a:hover, a:active{
+	background-color:#CF5C3F;
+	color:#ffffff;
+}
 nav{
 	background-color: #666666;
     padding-left: 25px;
@@ -108,12 +116,15 @@ input[type="checkbox"] {
     height:auto;
 }
 
-
 .name_species {
 	font-style: italic;
 	color: #797979;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.species {
+    display: inline;
 }
 
 .error{
@@ -128,8 +139,8 @@ input[type="checkbox"] {
 	font-style: italic;
 }
 
-button {
-	display: inline;
+.btn {
+	display: inline-block;
 	border: none;
 	padding: 0;
     margin: 2px 5%;
@@ -140,11 +151,13 @@ button {
 	width: 175px;
 	font-size: 1.1em;
 	color: #CF5C3F;
+    line-height: 50px;
 }
 
-a.export, a.export:visited, a.export:hover {
-	text-decoration: none;
-    background-color: white;
+a.btn, a.btn:visited, a.btn:hover {
+    width: 250px;
+    color: #CF5C3F;
+    background-color: #faebd7;
 }
 
 .parasitemia{
@@ -155,17 +168,6 @@ a.export, a.export:visited, a.export:hover {
 .actions {
     text-align: center;
 }
-
-a{
-	text-decoration: none;
-}
-
-
-a:hover, a:active{
-	background-color:#CF5C3F;
-	color:#ffffff;
-}
-
 
 footer{
     position: absolute;
@@ -227,11 +229,12 @@ footer a:hover, a:active{
 		width: 97%;
 	}
 
-	button{
+	.btn{
 		margin-top: 10px;
         margin-bottom: 7px;
         margin-right: 0px;
 		height: 40px;
+        line-height: 40px;
 		width: 75%;
 		border-radius: 5px;
 	}
