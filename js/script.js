@@ -1,6 +1,8 @@
 /**
  * Created by Aristide Ndielé on 12/11/2015.
  */
+ var nb_para = 0;
+ var nb_wbc = 0;
 $(document).ready(function(){
     // default value for the number of white blood cell / microlitre of blood
     $('#input_nb_wbc_blood').val(8000);
@@ -35,6 +37,10 @@ $(document).ready(function(){
         $('input:checkbox').removeAttr('checked');
         // put focus on the first input field
         $("#input_nb_parasite").focus();
+		
+		//reset the count
+		nb_para = 0;
+		nb_wbc = 0;
     });
 
     // refresh date and time
@@ -168,6 +174,23 @@ function prefix_zero(number) {
     return number;
 }
 
+//fonctions d'ecoute des touches de volumes
+document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);  
+document.addEventListener("volumedownbutton", volumedownbutton, false);
+
+	//on incremente les parasites
+function    onVolumeUpKeyDown()
+{
+	nb_para++;
+    $('#input_nb_parasite').text(nb_para);
+}
+
+	//on incremente les globules
+function    volumedownbutton()
+{
+	nb_wbc++;
+    $('#input_nb_wbc').text(nb_wbc);   
+}
 
 // function to build date and time
 function print_date_time(id) {
