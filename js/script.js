@@ -52,28 +52,40 @@ $(document).ready(function(){
     $(".export").on('click', function (event) {
         var sep_line = '\r\n';
         var sep_field = '\t';
+        var csv_name = name_csv($("#input_ref_id").val());
         var csv = format_csv("DensiPara", "FCRM & Fongwama", sep_field, sep_line);
         // quality control data
         csv  += format_csv($("#label_date_time").html(), $("#input_date_time").val(), sep_field, sep_line);
         csv  += format_csv($("#label_ref_id").html(), $("#input_ref_id").val(), sep_field, sep_line);
         csv  += format_csv($("#label_tech_id").html(), $("#input_tech_id").val(), sep_field, sep_line);
-        // parasitemia
+        // parasitemia data
         csv  += format_csv($("#label_nb_parasite").html(), $("#input_nb_parasite").val(), sep_field, sep_line);
         csv  += format_csv($("#label_nb_wbc").html(), $("#input_nb_wbc").val(), sep_field, sep_line);
         csv  += format_csv($("#label_nb_wbc_blood").html(), $("#input_nb_wbc_blood").val(), sep_field, sep_line);
         csv  += format_csv($("#label_parasitemia").html(), $("#input_parasitemia").val(), sep_field, sep_line);
-        // parasite species
+        // parasite species data
         $("input:checkbox:checked").each(function() {
             csv += format_csv($("#label_species").html(), $(this).val(), sep_field, sep_line);
         });
-        //buil data uri
-        csv_data = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
-        // add download attribute
-        $(this).attr({
-            'download': name_csv($("#input_ref_id").val()),
-            'href': csv_data,
-            'target': '_blank'
-        });
+        // prepare data download
+        if(window.navigator.msSaveOrOpenBlob && window.Blob) {
+            // Internet Explorer does not support 'download' attribute
+            // http://stackoverflow.com/questions/27257336/downloading-a-dynamic-csv-in-internet-explorer
+            // this works for IE 10+
+            var data_file = [csv];
+            var data_blob = new Blob(data_file, {type: "text/csv;charset=utf-8;"});
+            window.navigator.msSaveOrOpenBlob(data_blob, csv_name);
+        } else {
+            // for all other browsers
+            //buil data uri
+            csv_data = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+            // add download attribute
+            $(this).attr({
+                'download': csv_name,
+                'href': csv_data,
+                'target': '_blank'
+            });
+        }
     });
 });
 

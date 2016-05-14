@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>DensiPara - FCRM &amp; Fongwama</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     
@@ -22,86 +22,86 @@
 
     <!-- content / form -->
     <section>
-        <article>
-            <form method="post" action="retun false;">
+            <form method="post" action="#">
                 <fieldset id="field_thick_smear">
                 <legend id="legend_thick_smear">Analyse goutte épaisse</legend>
                 <div>
-                    <label id="label_nb_parasite">Nombre de parasites</label>
-                    <input id="input_nb_parasite" type="text">
+                    <label id="label_nb_parasite" for="input_nb_parasite">Nombre de parasites</label>
+                    <input id="input_nb_parasite" type="text" />
                     <span id="info_nb_parasite" class="error"></span>
                 </div>
                 <div>
-                    <label id="label_nb_wbc">Nombre de globules blancs</label>
-                    <input id="input_nb_wbc" type="text">
+                    <label id="label_nb_wbc" for="input_nb_wbc">Nombre de globules blancs</label>
+                    <input id="input_nb_wbc" type="text" />
                     <span id="info_nb_wbc" class="error"></span>
                     <span id="info_nb_wbc_null" class="error"></span>
                     <span id="info_nb_wbc_200" class="warning"></span>
                     <span id="info_nb_wbc_500" class="warning"></span>
                 </div>
                 <div>
-                    <label id="label_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
-                    <input id="input_nb_wbc_blood" type="text">
+                    <label id="label_nb_wbc_blood" for="input_nb_wbc_blood">Nombre de globules blancs / µL de sang</label>
+                    <input id="input_nb_wbc_blood" type="text" />
                     <span id="info_nb_wbc_blood" class="error"></span>
                 </div>
                 <div class="actions">
-                    <button id="button_compute" type="button">Calculer</button>
-                    <button id="button_reset" type="button">Réinitialiser</button>
+                    <button id="button_compute" class="btn" type="button">Calculer</button>
+                    <button id="button_reset" class="btn" type="button">Réinitialiser</button>
                 </div>
                 <div>
                     <label id="label_parasitemia" class="parasitemia">Densité parasitaire</label>
-                    <input id="input_parasitemia" class="parasitemia" type="text" readonly="true">
+                    <input id="input_parasitemia" class="parasitemia" type="text" readonly />
                     <label id="label_parasitemia_unit" class="parasitemia">parasites / µL de sang</label>
                 </div>
                 </fieldset>
                 <fieldset class="field_thin_smear">
                     <legend id="legend_thin_smear">Analyse frottis sanguin</legend>
                         <div>
-                            <label id="label_species">Espèces identifiées :</label>
-                            <div class="name_species">
-                            <input type="checkbox" value="Plasmodium falciparum">Plasmodium falciparum<br />
+                            <label id="label_species">Espèces identifiées</label>
+                            <div class="name_species"> 
+                                <input type="checkbox" class="species" id="input_p_falciparum" value="Plasmodium falciparum" />
+                                <label class="species" for="input_p_falciparum">Plasmodium falciparum</label>
                             </div>
                             <div class="name_species">
-                            <input type="checkbox" value="Plasmodium vivax">Plasmodium vivax<br />
+                                <input type="checkbox" class="species" id="input_p_vivax" value="Plasmodium vivax" />
+                                <label class="species" for="input_p_vivax">Plasmodium vivax</label>
                             </div>
                             <div class="name_species">
-                            <input type="checkbox" value="Plasmodium ovale">Plasmodium ovale<br />
+                                <input type="checkbox" class="species" id="input_p_ovale" value="Plasmodium ovale" />
+                                <label class="species" for="input_p_ovale">Plasmodium ovale</label>
                             </div>
                             <div class="name_species">
-                            <input type="checkbox" value="Plasmodium malariae">Plasmodium malariae<br />
+                                <input type="checkbox" class="species" id="input_p_malariae" value="Plasmodium malariae" />
+                                <label class="species" for="input_p_malariae">Plasmodium malariae</label>
                             </div>
                             <div class="name_species">
-                            <input type="checkbox" value="Plasmodium knowlesi">Plasmodium knowlesi<br />
+                                <input type="checkbox" class="species" id="input_p_knowlesi" value="Plasmodium knowlesi" />
+                                <label class="species" for="input_p_knowlesi">Plasmodium knowlesi</label>
                             </div>
-                        <div>
+                        </div>
                 </fieldset>
                 <fieldset class="field_quality_control">
                     <legend id="label_quality_control">Contrôle qualité</legend>
                     <div>
-                    <label id="label_ref_id">Numéro de référence</label>
-                    <input id="input_ref_id" type="text"/>
+                        <label id="label_ref_id" for="input_ref_id">Numéro de référence</label>
+                        <input id="input_ref_id" type="text" />
                     </div>
                     <div>
-                    <label id="label_tech_id">Nom du technicien</label>
-                    <input id="input_tech_id" type="text"/>
+                        <label id="label_tech_id" for="input_tech_id">Nom du technicien</label>
+                        <input id="input_tech_id" type="text" />
                     </div>
                     <div>
-                    <label id="label_date_time">Date et heure</label>
-                    <input id="input_date_time" type="text" />
+                        <label id="label_date_time">Date et heure</label>
+                        <input id="input_date_time" type="text" readonly />
                     </div>
                 </fieldset>
                 <div class="actions"> 
-                <a href="#" class="export">
-                    <button id="button_export" type="button">Exporter les données</button>
+                <a href="#" class="export btn" id="button_export">
+                    Exporter les données
                 </a>
                 </div>   
 
             </form>
-        </article>
     </section>
-
-
-
     <!-- footer -->
     <footer>
         <a href="http://www.fcrm-congo.com" target="_blank">FCRM</a> &amp; <a href="http://www.fongwama.com" target="_blank">Fongwama</a> 2016
