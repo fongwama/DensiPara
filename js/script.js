@@ -32,6 +32,7 @@ $(document).ready(function(){
         $("#info_nb_wbc_200").css("display","none;").fadeOut(0);
         $("#info_nb_wbc_500").css("display","none;").fadeOut(0);
         $("#input_parasitemia").val("");
+        $("#info_hyperparasitemia").css("display","none;").fadeOut(0);
         $("#input_ref_id").val("");
         $("#input_tech_id").val("");
         $('input:checkbox').removeAttr('checked');
