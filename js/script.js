@@ -29,6 +29,8 @@ $(document).ready(function(){
         // clean all input fields but input_nb_wbc_blood (default value)
         $("#input_nb_parasite").val("");
         $("#input_nb_wbc").val("");
+        $("#info_nb_wbc_200").css("display","none;").fadeOut(0);
+        $("#info_nb_wbc_500").css("display","none;").fadeOut(0);
         $("#input_parasitemia").val("");
         $("#input_ref_id").val("");
         $("#input_tech_id").val("");
@@ -90,6 +92,10 @@ function compute_parasitemia() {
         var resultat = $("#input_nb_parasite").val() * $("#input_nb_wbc_blood").val() / $("#input_nb_wbc").val();
         $("#input_parasitemia").val(Math.round(resultat));
     }
+    // hyperparasitemia
+    if ( $("#input_parasitemia").val() > 250000 ) {
+        $("#info_hyperparasitemia").css("display","block");
+    }
     // update date and time
     print_date_time("#input_date_time");
 }
@@ -142,7 +148,7 @@ function verify_input_data() {
     } else if ( $("#input_nb_parasite").val() < 100 && $("#input_nb_wbc").val() < 500) {
         $("#info_nb_wbc_500").css("display","block");
     }
-    
+   
     // everything is fine
     return true;
 }
