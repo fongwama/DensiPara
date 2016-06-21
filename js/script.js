@@ -28,9 +28,13 @@ $(document).ready(function(){
     $("#button_reset").click(function() {
         // clean all input fields but input_nb_wbc_blood (default value)
         $("#input_nb_parasite").val("");
+        $("#info_nb_parasite").css("display","none;").fadeOut(0);
         $("#input_nb_wbc").val("");
+        $("#info_nb_wbc").css("display","none;").fadeOut(0);
+        $("#info_nb_wbc_null").css("display","none;").fadeOut(0);
         $("#info_nb_wbc_200").css("display","none;").fadeOut(0);
         $("#info_nb_wbc_500").css("display","none;").fadeOut(0);
+        $("#info_nb_wbc_blood").css("display","none;").fadeOut(0);
         $("#input_parasitemia").val("");
         $("#info_hyperparasitemia").css("display","none;").fadeOut(0);
         $("#input_ref_id").val("");
