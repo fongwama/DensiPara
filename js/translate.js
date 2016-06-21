@@ -12,7 +12,7 @@ var translation = {
         "info_nb_wbc_200"         : "Il est recommandé de compter au moins 200 globules blancs.",
         "info_nb_wbc_500"         : "Pour moins de 100 parasites, il est recommandé de compter au moins 500 globules blancs.",
         "label_nb_wbc_blood"      : "Nombre de globules blancs / µL de sang",
-        "info_nb_wbc_blood"       : "Veuiller saisir le nombre de globules blancs / µL de sang.", 
+        "info_nb_wbc_blood"       : "Veuillez saisir le nombre de globules blancs / µL de sang.", 
         "button_compute"          : "Calculer",
         "button_reset"            : "Réinitialiser",
         "label_parasitemia"       : "Densité parasitaire",
