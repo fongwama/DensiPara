@@ -1,3 +1,5 @@
+![logo DensiPara](local/logo_DensiPara_text.png)
+
 # DensiPara
 
 Application de calcul de la densité parasitaire pour le diagnostic du paludisme. 
