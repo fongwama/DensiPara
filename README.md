@@ -6,11 +6,11 @@ La densité parasitaire est une mesure de la quantité de parasites dans le sang
 
 ## Version web
 
-Testez immédiatement DensiPara en cliquant que le lient suivant : [fongwama.github.io/DensiPara](http://fongwama.github.io/DensiPara/)
+Utilisez DensiPara en ligne en cliquant sur le lient suivant : [fongwama.github.io/DensiPara](http://fongwama.github.io/DensiPara/)
 
 ## Version PC (et Mac aussi)
 
-- Télécharger la dernière version de DensiPara : [zip](https://github.com/fongwama/DensiPara/archive/master.zip)
+- Télécharger la dernière version de DensiPara en cliquant sur le lien suivant : [DensiPara-master.zip](https://github.com/fongwama/DensiPara/archive/master.zip)
 - Décompressez le fichier `DensiPara-master.zip` que vous avez téléchargé (sous Windows, en cliquant droit sur le fichier puis en sélectionnant "Extraire tout..."). L'application sera dans le répertoire `Densipara-master`.
 - Ouvrez le fichier `index.html` (ou `index` sous Windows) avec un navigateur internet récent (de préférence Mozilla Firefox ou Google Chrome).
 
