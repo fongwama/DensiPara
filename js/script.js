@@ -50,7 +50,7 @@ $(document).ready(function(){
     // prepare data for export
     // http://stackoverflow.com/questions/27398074/saving-a-data-from-html-form-to-text-file-with-jquery-javascript
     // http://jsfiddle.net/terryyounghk/kpegu/ 
-    $(".export").on('click', function (event) {
+    $("#button_export").on('click', function (event) {
         var sep_line = '\r\n';
         var sep_field = '\t';
         var csv_name = name_csv($("#input_ref_id").val());

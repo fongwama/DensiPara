@@ -239,7 +239,7 @@ footer a:hover, a:active{
 		border-radius: 5px;
 	}
     
-    .field_thin_smear, .field_quality_control, .export {
+    .field_thin_smear, .field_quality_control {
         display : none;
     }
 
