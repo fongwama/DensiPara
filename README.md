@@ -1,6 +1,8 @@
-# DensiPara
+![logo DensiPara](local/logo_DensiPara_text.png)
 
-Application de calcul de la densité parasitaire pour le diagnostic du paludisme. 
+---
+
+DensiPara est une application de calcul de la densité parasitaire pour le diagnostic du paludisme. 
 
 La densité parasitaire est une mesure de la quantité de parasites dans le sang. C’est un paramètre très important pour déterminer la force de l’infection plasmodiale. Elle est utilisée par les médecins pour affiner leur diagnostic et adapter leur traitement. Cette application est à destination des techniciens de laboratoire qui diagnostiquent le paludisme par microscopie (goutte épaisse et frottis sanguin).
 
