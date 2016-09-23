@@ -8,9 +8,8 @@ html {
 
 body{
 	background-color: #ffffff;
-	font-size: 110%;
-	font-family: Arial, sans-serif;
-	line-height: 20px;
+	font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif	line-height: 20px;
 	text-align: left;
 	overflow:auto;
 	margin: 0 auto;
@@ -18,6 +17,7 @@ body{
 	border: 1px solid #656565;
     min-height: 100%;
     position: relative;
+  	color: #333;
 }
 
 header{
