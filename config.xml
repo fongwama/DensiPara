@@ -13,8 +13,8 @@
         Calcul de la densite parasitaire pour le diagnostic du paludisme
     </description>
 
-    <author href="http://www.fcrm-congo.com" email="info@fcrm-congo.com">
-        FCRM et Fongwama 
+    <author href="http://www.fongwama.com" email="mbote@fongwama.com">
+        Fongwama 
     </author>
 
     <!-- build only for android -->
